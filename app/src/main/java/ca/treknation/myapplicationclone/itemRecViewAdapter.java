@@ -19,9 +19,15 @@ import androidx.transition.TransitionManager;
 
 import java.util.ArrayList;
 
+import static ca.treknation.myapplicationclone.LongDesc.ITEM_ID_KEY;
+
 public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.ViewHolder> {
 
     private Context mContext;
+
+    public itemRecViewAdapter(Context mContext) {
+        this.mContext = mContext;
+    }
 
     private ArrayList<Item> items = new ArrayList<>();
     private int mExpandedPosition = -1;
@@ -40,17 +46,28 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
         holder.txtItem.setText(items.get(position).getItemName());
         holder.txtShortDesc.setText(items.get(position).getItemShortDesc());
-        holder.txtLearnMore.setText(items.get(position).getLearnMore());
+//        holder.txtLongDesc.setText(items.get(position).getItemLongDesc());
+
+        holder.txtShortDesc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, LongDesc.class);
+                intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
+                mContext.startActivity(intent);
+            }
+        });
 
 
         if (items.get(position).isExpanded()) {
             TransitionManager.beginDelayedTransition(holder.parent);
             holder.expandedRelLayout.setVisibility(View.VISIBLE);
             holder.downArrow.setVisibility(View.GONE);
+            holder.upArrow.setVisibility(View.VISIBLE);
         } else {
             TransitionManager.beginDelayedTransition(holder.parent);
             holder.expandedRelLayout.setVisibility(View.GONE);
             holder.downArrow.setVisibility(View.VISIBLE);
+            holder.upArrow.setVisibility(View.GONE);
         }
 
 
@@ -68,12 +85,11 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        private TextView txtItem;
-        private TextView txtShortDesc;
-        private TextView txtLearnMore;
+        private TextView txtItem, txtShortDesc;
         private ImageView downArrow, upArrow;
-        private RelativeLayout expandedRelLayout, collapsedRelLayout;
+        private RelativeLayout expandedRelLayout, collapsedRelLayout, parent1;
         private CardView parent;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             txtItem = itemView.findViewById(R.id.txtItem);
@@ -82,8 +98,8 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
             upArrow = itemView.findViewById(R.id.btnUpArrow);
             expandedRelLayout = itemView.findViewById(R.id.expandedRelLayout);
             collapsedRelLayout = itemView.findViewById(R.id.collapsedRelLayout);
+            parent1 = itemView.findViewById(R.id.parent1);
             parent = itemView.findViewById(R.id.parent);
-            txtLearnMore = itemView.findViewById(R.id.txtLearnMore);
 
             downArrow.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -103,15 +119,8 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
                 }
             });
 
-            txtLearnMore.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    Toast.makeText(mContext, "Learn More Clicked", Toast.LENGTH_SHORT).show();
-//                    Intent intent = new Intent(mContext, LongDesc.class);
-//                    mContext.startActivity(intent);
-                }
-            });
         }
+
     }
 }
+

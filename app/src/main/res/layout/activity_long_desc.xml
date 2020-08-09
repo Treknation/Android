@@ -1,9 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="15dp"
+    android:outlineAmbientShadowColor="#336c6c6c"
+    app:cardCornerRadius="7dp"
     tools:context=".LongDesc">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txtItemName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/circularstdmedium"
+            android:text="TextView"
+            android:textColor="#46494c"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtLongDesc"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtItemName"
+            android:text="TextView"
+            tools:layout_editor_absoluteX="171dp"
+            tools:layout_editor_absoluteY="76dp" />
+
+        <Button
+            android:id="@+id/btnMarkComplete"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="234dp"
+            android:layout_height="33dp"
+            android:layout_below="@id/txtLongDesc"
+            android:layout_centerHorizontal="true"
+            android:text="Mark as Complete"
+            android:background="@drawable/my_button_bg"
+            app:layout_constraintCircleRadius="16dp"
+            tools:layout_editor_absoluteX="125dp"
+            tools:layout_editor_absoluteY="164dp" />
+
+        <ImageView
+            android:id="@+id/btnBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
