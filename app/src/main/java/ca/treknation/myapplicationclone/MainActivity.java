@@ -1,10 +1,12 @@
 package ca.treknation.myapplicationclone;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -19,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView home_logo;
 
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,4 +37,5 @@ public class MainActivity extends AppCompatActivity {
         itemRecView.setLayoutManager(new LinearLayoutManager(this));
         adapter.setItems(Utils.getInstance().getAllItems());
     }
+
 }

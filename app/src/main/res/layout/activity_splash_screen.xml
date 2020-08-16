@@ -6,11 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreen">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imglogo"
-        android:layout_centerInParent="true"
-        android:src="@drawable/treknation_logo"/>
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/rectangle"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/treknation_logo" />
+
+    </FrameLayout>
+
+
+    <!--    <ImageView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:id="@+id/imglogo"-->
+    <!--        android:layout_centerInParent="true"-->
+    <!--        android:src="@drawable/treknation_logo"/>-->
 
 </RelativeLayout>

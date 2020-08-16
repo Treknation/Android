@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="15dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="15dp"
+    android:outlineAmbientShadowColor="#336c6c6c"
+    app:cardCornerRadius="7dp"
+    tools:context=".LongDesc"
+    tools:targetApi="p">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/btnBackArrow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:id="@+id/getYourEca"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/circularstdmedium"
+            android:text="Language Tests"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/costsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="56dp"
+            android:text="The below table outlines the costs for the 4 different exam types"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TableLayout
+            android:id="@+id/table"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:collapseColumns="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/costsTitle"> <!-- collapse the first column of the table row-->
+
+
+            <!-- first row of the table layout-->
+            <TableRow
+                android:layout_height="1dp"
+                android:background="#46494c">
+
+                <TextView
+                    android:layout_span="2"
+                    android:layout_height="2dp"
+                    android:layout_width="fill_parent"
+                    android:text=""></TextView>
+
+                <TextView
+                    android:layout_span="2"
+                    android:layout_height="2dp"
+                    android:layout_width="fill_parent"
+                    android:text=""></TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <!-- Add elements/columns in the first row-->
+                <TextView
+                    android:id="@+id/row11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:background="@drawable/border"
+                    android:text=""
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row12"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/row13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    android:text="Exam"
+                    android:layout_gravity="center"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row14"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/row15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    android:text="Cost &amp; Time"
+                    android:layout_gravity="center"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row16"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="2dp"
+                android:background="#46494c">
+
+                <TextView
+                    android:layout_span="2"
+                    android:layout_height="2dp"
+                    android:layout_width="fill_parent"
+                    android:text=""></TextView>
+
+                <TextView
+                    android:layout_span="2"
+                    android:layout_height="2dp"
+                    android:layout_width="fill_parent"
+                    android:text=""></TextView>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/row21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:padding="18dip"
+                    android:text="Organization"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row22"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/row23"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    android:text="IELTS - General"
+                    android:layout_gravity="center"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row24"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/row25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    android:text="$320 &amp; 14 days"
+                    android:layout_gravity="center"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row26"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/row31"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:padding="18dip"
+                    android:text="Organization"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row32"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/row33"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    android:text="CELPIP - General"
+                    android:layout_gravity="center"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row34"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/row35"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    android:text="$265 &amp; 8 days"
+                    android:layout_gravity="center"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row36"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/row41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:padding="18dip"
+                    android:text="Organization"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row42"
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/row43"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    android:text="TEF Canada"
+                    android:layout_gravity="center"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row44"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/row45"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    android:text="$300 &amp; 3-4 weeks"
+                    android:layout_gravity="center"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row46"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/row5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/row51"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:padding="18dip"
+                    android:text="Organization"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row52"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/row53"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    android:text="TCF Canada"
+                    android:layout_gravity="center"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row54"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/row55"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="18dip"
+                    android:text="$300 &amp; 15 days"
+                    android:layout_gravity="center"
+                    android:textColor="#46494c"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/row56"
+                    android:layout_width="2dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border"
+                    android:text="" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_height="2dp"
+                android:background="#46494c">
+
+                <TextView
+                    android:layout_span="2"
+                    android:layout_height="2dp"
+                    android:layout_width="fill_parent"
+                    android:text=""></TextView>
+
+                <TextView
+                    android:layout_span="2"
+                    android:layout_height="2dp"
+                    android:layout_width="fill_parent"
+                    android:text=""></TextView>
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="300dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

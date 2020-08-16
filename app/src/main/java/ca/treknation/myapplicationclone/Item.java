@@ -1,13 +1,15 @@
 package ca.treknation.myapplicationclone;
 
+import android.text.Spanned;
+
 public class Item {
     private int id;
     private String itemName;
     private String itemShortDesc;
     private boolean isExpanded;
-    private String itemLongDesc;
+    public Spanned itemLongDesc;
 
-    public Item(int id, String itemName, String itemShortDesc, boolean isExpanded, String itemLongDesc) {
+    public Item(int id, String itemName, String itemShortDesc, boolean isExpanded, Spanned itemLongDesc) {
         this.id = id;
         this.itemName = itemName;
         this.itemShortDesc = itemShortDesc;
@@ -48,11 +50,11 @@ public class Item {
         isExpanded = expanded;
     }
 
-    public String getItemLongDesc() {
+    public Spanned getItemLongDesc() {
         return itemLongDesc;
     }
 
-    public void setItemLongDesc(String itemLongDesc) {
+    public void setItemLongDesc(Spanned itemLongDesc) {
         this.itemLongDesc = itemLongDesc;
     }
 
@@ -63,7 +65,7 @@ public class Item {
                 ", itemName='" + itemName + '\'' +
                 ", itemShortDesc='" + itemShortDesc + '\'' +
                 ", isExpanded=" + isExpanded +
-                ", itemLongDesc='" + itemLongDesc + '\'' +
+//                ", itemLongDesc='" + itemLongDesc + '\'' +
                 '}';
     }
 }

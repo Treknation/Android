@@ -1,12 +1,19 @@
 package ca.treknation.myapplicationclone;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.method.LinkMovementMethod;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,21 +22,22 @@ public class LongDesc extends AppCompatActivity {
     public static final String ITEM_ID_KEY = "itemID";
 
     private TextView txtItemName, txtLongDesc;
-    private Button btnMarkComplete;
+    private Button btnMarkComplete, btnCosts, btnSubmitEE, btnTestResult, btnTestCost, btnCEC, btnFSW, btnFST;
     private ImageView btnBackArrow;
+    private ScrollView scrollerID;
+    private Context lContext;
 
+//    public LongDesc(Context lContext) {
+//        this.lContext = lContext;
+//    }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_long_desc);
         initViews();
-
-//        Item item = new Item(1, "Overview", "Express Entry is an electronic immigration selection system for selecting applicants for permanent residence under the 3 programs Federal Skilled Worker, Canadian Experience Class, and Federal Skilled Trades. You can also apply through express entry if you have received a nomination from a province or territory. This nomination is also called PNP which stands for Provincial Nominee Program.\n" +
-////                "Candidates can fill their online profile and the eligibility is electronically determined for the programs mentioned above. Using this information, the candidates are given a Comprehensive Ranking System (CRS) score. They are then placed in the Express Entry pool and ranked relative to each other based on their CRS scores. Top ranking candidates within the pool are invited to apply for permanent residence after each pool.\n", true, "This is long Desc");
-////
-////        setData(item);
-
+        txtLongDesc.setMovementMethod(LinkMovementMethod.getInstance());
 
         btnMarkComplete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,8 +53,12 @@ public class LongDesc extends AppCompatActivity {
             }
         });
 
-
-        //TODO: Get the data from recylcer view in here
+        btnCosts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(LongDesc.this, "This is test", Toast.LENGTH_SHORT).show();
+            }
+        });
 
         Intent intent = getIntent();
         if (null != intent) {
@@ -56,11 +68,91 @@ public class LongDesc extends AppCompatActivity {
                 if (null != incomingItem) {
                     setData(incomingItem);
                 }
+                if (itemID != 3) {
+                    btnCosts.setVisibility(View.GONE);
+                    btnSubmitEE.setVisibility(View.GONE);
+                } else {
+                    btnCosts.setVisibility(View.VISIBLE);
+                    btnSubmitEE.setVisibility(View.VISIBLE);
+
+                    btnCosts.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent1 = new Intent(LongDesc.this, Costs.class);
+                            startActivity(intent1);
+                        }
+                    });
+
+                    btnSubmitEE.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent2 = new Intent(LongDesc.this, Submit_ee.class);
+                            startActivity(intent2);
+                        }
+                    });
+                }
+                if ((itemID != 4)) {
+                    btnTestResult.setVisibility(View.GONE);
+                    btnTestCost.setVisibility(View.GONE);
+                } else {
+                    btnTestResult.setVisibility(View.VISIBLE);
+                    btnTestCost.setVisibility(View.VISIBLE);
+
+                    btnTestResult.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent3 = new Intent(LongDesc.this, ConvertLanguageResults.class);
+                            startActivity(intent3);
+                        }
+                    });
+
+                    btnTestCost.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent4 = new Intent(LongDesc.this, LanguageCosts.class);
+                            startActivity(intent4);
+                        }
+                    });
+                }
+
+                if ((itemID != 5)) {
+                    btnCEC.setVisibility(View.GONE);
+                    btnFST.setVisibility(View.GONE);
+                    btnFSW.setVisibility(View.GONE);
+                } else {
+                    btnCEC.setVisibility(View.VISIBLE);
+                    btnFST.setVisibility(View.VISIBLE);
+                    btnFSW.setVisibility(View.VISIBLE);
+
+                    btnCEC.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent5 = new Intent(LongDesc.this, Cec.class);
+                            startActivity(intent5);
+                        }
+                    });
+
+                    btnFST.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent6 = new Intent(LongDesc.this, Fst.class);
+                            startActivity(intent6);
+                        }
+                    });
+
+                    btnFSW.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent7 = new Intent(LongDesc.this, Fsw.class);
+                            startActivity(intent7);
+                        }
+                    });
+
+                }
+
             }
         }
-
     }
-
     private void setData(Item item) {
         txtItemName.setText(item.getItemName());
         txtLongDesc.setText(item.getItemLongDesc());
@@ -77,5 +169,13 @@ public class LongDesc extends AppCompatActivity {
         txtLongDesc = findViewById(R.id.txtLongDesc);
         btnMarkComplete = findViewById(R.id.btnMarkComplete);
         btnBackArrow = findViewById(R.id.btnBackArrow);
+        btnSubmitEE = findViewById(R.id.btnSubmitEE);
+        btnCosts = findViewById(R.id.btnCosts);
+        btnTestResult = findViewById(R.id.btnTestResult);
+        btnTestCost = findViewById(R.id.btnTestCost);
+        scrollerID = findViewById(R.id.scrollerID);
+        btnCEC = findViewById(R.id.btnCEC);
+        btnFSW = findViewById(R.id.btnFSW);
+        btnFST = findViewById(R.id.btnFST);
     }
 }
