@@ -66,6 +66,7 @@
                     android:fontFamily="@font/circularstdbook"
                     android:includeFontPadding="false"
                     android:scrollbars="vertical"
+                    android:textSize="16sp"
                     android:text="Long Description"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

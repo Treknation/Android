@@ -3,6 +3,7 @@ package ca.treknation.myapplicationclone;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.text.SpannableString;
 import android.text.method.LinkMovementMethod;
 import android.text.method.ScrollingMovementMethod;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -20,11 +22,11 @@ import android.widget.Toast;
 public class LongDesc extends AppCompatActivity {
 
     public static final String ITEM_ID_KEY = "itemID";
+    private static final String TAG = "TAG";
 
     private TextView txtItemName, txtLongDesc;
     private Button btnMarkComplete, btnCosts, btnSubmitEE, btnTestResult, btnTestCost, btnCEC, btnFSW, btnFST;
     private ImageView btnBackArrow;
-    private ScrollView scrollerID;
     private Context lContext;
 
 //    public LongDesc(Context lContext) {
@@ -39,12 +41,7 @@ public class LongDesc extends AppCompatActivity {
         initViews();
         txtLongDesc.setMovementMethod(LinkMovementMethod.getInstance());
 
-        btnMarkComplete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(LongDesc.this, "This is sample text", Toast.LENGTH_SHORT).show();
-            }
-        });
+
 
         btnBackArrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +59,20 @@ public class LongDesc extends AppCompatActivity {
 
         Intent intent = getIntent();
         if (null != intent) {
-            int itemID = intent.getIntExtra(ITEM_ID_KEY, -1);
+            //check to see if final required or not; made itemID final since it was giving error while clicking on markasComplete putExtra
+            final int itemID = intent.getIntExtra(ITEM_ID_KEY, -1);
+            final int position = intent.getIntExtra("Position", -1);
+            btnMarkComplete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent resultIntent = new Intent();
+                    resultIntent.putExtra("Item ID", itemID);
+                    resultIntent.putExtra("Position", position);
+                    setResult(RESULT_OK, resultIntent);
+                    Log.d(TAG, "onClick: started");
+                    finish();
+                }
+            });
             if (itemID != -1) {
                 Item incomingItem = Utils.getInstance().getItemById(itemID);
                 if (null != incomingItem) {
@@ -151,17 +161,18 @@ public class LongDesc extends AppCompatActivity {
                 }
 
             }
+
         }
+
+
     }
+
+
     private void setData(Item item) {
         txtItemName.setText(item.getItemName());
         txtLongDesc.setText(item.getItemLongDesc());
     }
 
-
-//    private void setData(Item item) {
-//        txtLongDesc.setText(item.getItemLongDesc());
-//    }
 
 
     private void initViews() {
@@ -173,7 +184,6 @@ public class LongDesc extends AppCompatActivity {
         btnCosts = findViewById(R.id.btnCosts);
         btnTestResult = findViewById(R.id.btnTestResult);
         btnTestCost = findViewById(R.id.btnTestCost);
-        scrollerID = findViewById(R.id.scrollerID);
         btnCEC = findViewById(R.id.btnCEC);
         btnFSW = findViewById(R.id.btnFSW);
         btnFST = findViewById(R.id.btnFST);

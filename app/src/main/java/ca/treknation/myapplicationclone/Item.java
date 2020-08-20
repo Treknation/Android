@@ -8,6 +8,7 @@ public class Item {
     private String itemShortDesc;
     private boolean isExpanded;
     public Spanned itemLongDesc;
+    public boolean isViewed = false;
 
     public Item(int id, String itemName, String itemShortDesc, boolean isExpanded, Spanned itemLongDesc) {
         this.id = id;
@@ -15,6 +16,7 @@ public class Item {
         this.itemShortDesc = itemShortDesc;
         this.isExpanded = isExpanded;
         this.itemLongDesc = itemLongDesc;
+        this.isViewed = isViewed;
     }
 
 
@@ -56,6 +58,14 @@ public class Item {
 
     public void setItemLongDesc(Spanned itemLongDesc) {
         this.itemLongDesc = itemLongDesc;
+    }
+
+    public boolean isViewed() {
+        return isViewed;
+    }
+
+    public void setViewed(boolean viewed) {
+        isViewed = viewed;
     }
 
     @Override

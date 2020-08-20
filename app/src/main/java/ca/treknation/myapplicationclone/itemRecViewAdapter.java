@@ -1,5 +1,6 @@
 package ca.treknation.myapplicationclone;
 
+import android.app.Instrumentation;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -19,15 +20,19 @@ import androidx.transition.TransitionManager;
 
 import java.util.ArrayList;
 
+import static android.content.ContentValues.TAG;
 import static ca.treknation.myapplicationclone.LongDesc.ITEM_ID_KEY;
+
 
 public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.ViewHolder> {
 
     private Context mContext;
 
     public itemRecViewAdapter(Context mContext) {
+
         this.mContext = mContext;
     }
+
 
     private ArrayList<Item> items = new ArrayList<>();
     private int mExpandedPosition = -1;
@@ -53,9 +58,41 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, LongDesc.class);
                 intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
+                intent.putExtra("Position", position);
+                ((MainActivity) mContext).startActivityForResult(intent, 1);
                 mContext.startActivity(intent);
             }
         });
+
+        holder.txtItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, LongDesc.class);
+                intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
+                intent.putExtra("Position", position);
+                ((MainActivity) mContext).startActivityForResult(intent, 1);
+                mContext.startActivity(intent);
+            }
+        });
+
+
+        if (items.get(position).isViewed) {
+            holder.collapsedRelLayout.setBackgroundColor(mContext.getResources().getColor(R.color.blue));
+            holder.expandedRelLayout.setVisibility(View.INVISIBLE);
+            items.get(position).setExpanded(false);
+            holder.txtItem.setTextColor(mContext.getResources().getColor(R.color.white));
+            holder.btnComplete.setVisibility(View.VISIBLE);
+            holder.txtItem.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(mContext, LongDesc.class);
+                    intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
+                    intent.putExtra("Position", position);
+                    ((MainActivity) mContext).startActivityForResult(intent, 1);
+                    mContext.startActivity(intent);
+                }
+            });
+        }
 
 
         if (items.get(position).isExpanded()) {
@@ -86,7 +123,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView txtItem, txtShortDesc;
-        private ImageView downArrow, upArrow;
+        private ImageView downArrow, upArrow, btnComplete;
         private RelativeLayout expandedRelLayout, collapsedRelLayout, parent1;
         private CardView parent;
 
@@ -96,6 +133,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
             txtShortDesc = itemView.findViewById(R.id.txtShortDesc);
             downArrow = itemView.findViewById(R.id.btnDownArrow);
             upArrow = itemView.findViewById(R.id.btnUpArrow);
+            btnComplete = itemView.findViewById(R.id.btnComplete);
             expandedRelLayout = itemView.findViewById(R.id.expandedRelLayout);
             collapsedRelLayout = itemView.findViewById(R.id.collapsedRelLayout);
             parent1 = itemView.findViewById(R.id.parent1);
@@ -118,9 +156,8 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
                     notifyItemChanged(getAdapterPosition());
                 }
             });
-
         }
-
     }
+
 }
 
