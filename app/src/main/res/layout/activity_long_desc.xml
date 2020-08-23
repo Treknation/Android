@@ -61,12 +61,13 @@
                     android:id="@+id/txtLongDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="17dp"
-                    android:layout_marginEnd="17dp"
+                    android:paddingStart="17dp"
+                    android:paddingEnd="17dp"
                     android:fontFamily="@font/circularstdbook"
                     android:includeFontPadding="false"
                     android:scrollbars="vertical"
                     android:textSize="16sp"
+                    android:clickable="true"
                     android:text="Long Description"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -129,6 +130,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtLongDesc" />
 
+
                 <Button
                     android:id="@+id/btnCEC"
                     android:layout_width="260dp"
@@ -148,6 +150,18 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtLongDesc" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="15dp"
+                    android:layout_toEndOf="@id/btnCEC"
+                    android:src="@drawable/open"
+                    android:layout_marginRight="26dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/btnCEC"
+                    app:layout_constraintEnd_toEndOf="@+id/btnCEC"
+                    app:layout_constraintTop_toTopOf="@+id/btnCEC"
+                    android:elevation="2dp" />
 
                 <Button
                     android:id="@+id/btnFSW"

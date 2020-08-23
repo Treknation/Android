@@ -43,9 +43,10 @@
             android:id="@+id/costsTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="17dp"
             android:layout_marginTop="52dp"
             android:text="Costs and Processing Time"
+            android:textSize="12sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -57,7 +58,10 @@
             android:layout_marginStart="17dp"
             android:layout_marginTop="80dp"
             android:layout_marginEnd="17dp"
+            android:paddingStart="17dp"
+            android:paddingEnd="17dp"
             android:text="Cost to get an assessment range between 200$ to 220$ depending on the organization you get the assessment from. The processing times vary as per the organizations shown below"
+            android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -66,6 +70,7 @@
             android:id="@+id/table"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="49dp"
             android:collapseColumns="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -115,12 +120,12 @@
                 <TextView
                     android:id="@+id/row13"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:text="Organization"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/row14"
@@ -132,12 +137,12 @@
                 <TextView
                     android:id="@+id/row15"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:text="Time"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/row16"
@@ -191,11 +196,14 @@
                 <TextView
                     android:id="@+id/row23"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:text="CES University of Toronto"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:textColor="#46494c"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/row24"
@@ -207,12 +215,14 @@
                 <TextView
                     android:id="@+id/row25"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="14 Weeks"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/row26"
@@ -248,11 +258,13 @@
                 <TextView
                     android:id="@+id/row33"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="ICAS Canada"
                     android:textColor="#46494c"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/row34"
@@ -264,12 +276,14 @@
                 <TextView
                     android:id="@+id/row35"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="20 Weeks"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/row36"
@@ -305,11 +319,13 @@
                 <TextView
                     android:id="@+id/row43"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="WES"
                     android:textColor="#46494c"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/row44"
@@ -321,12 +337,14 @@
                 <TextView
                     android:id="@+id/row45"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="7 Weeks"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/row46"
@@ -362,11 +380,13 @@
                 <TextView
                     android:id="@+id/row53"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="IQAS"
                     android:textColor="#46494c"
-                    android:textSize="14sp" />
+                    android:textSize="12sp" />
 
                 <TextView
                     android:id="@+id/row54"
@@ -378,10 +398,12 @@
                 <TextView
                     android:id="@+id/row55"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="12 Weeks"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 
@@ -419,8 +441,10 @@
                 <TextView
                     android:id="@+id/row63"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
+                    android:gravity="center_vertical"
                     android:text="ICES"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
@@ -435,10 +459,12 @@
                 <TextView
                     android:id="@+id/row65"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="8 Weeks"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 

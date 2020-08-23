@@ -44,17 +44,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="56dp"
+            android:paddingStart="17dp"
+            android:paddingEnd="17dp"
             android:text="The below table outlines the costs for the 4 different exam types"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@+id/guideline2"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="@+id/guideline"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TableLayout
             android:id="@+id/table"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
             android:collapseColumns="0"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -104,10 +107,10 @@
                 <TextView
                     android:id="@+id/row13"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:text="Exam"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 
@@ -121,10 +124,10 @@
                 <TextView
                     android:id="@+id/row15"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
                     android:text="Cost &amp; Time"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 
@@ -180,10 +183,11 @@
                 <TextView
                     android:id="@+id/row23"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="IELTS - General"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 
@@ -197,10 +201,12 @@
                 <TextView
                     android:id="@+id/row25"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="$320 &amp; 14 days"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 
@@ -238,10 +244,12 @@
                 <TextView
                     android:id="@+id/row33"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="CELPIP - General"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 
@@ -255,10 +263,12 @@
                 <TextView
                     android:id="@+id/row35"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="$265 &amp; 8 days"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 
@@ -296,10 +306,11 @@
                 <TextView
                     android:id="@+id/row43"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="TEF Canada"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 
@@ -313,10 +324,12 @@
                 <TextView
                     android:id="@+id/row45"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="$300 &amp; 3-4 weeks"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 
@@ -354,10 +367,11 @@
                 <TextView
                     android:id="@+id/row53"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="TCF Canada"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 
@@ -371,10 +385,12 @@
                 <TextView
                     android:id="@+id/row55"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="18dip"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="11dp"
+                    android:paddingEnd="11dp"
                     android:text="$300 &amp; 15 days"
-                    android:layout_gravity="center"
                     android:textColor="#46494c"
                     android:textSize="14sp" />
 

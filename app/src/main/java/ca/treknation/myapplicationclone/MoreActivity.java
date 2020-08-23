@@ -1,45 +1,45 @@
 package ca.treknation.myapplicationclone;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.util.Log;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainFragment extends Fragment {
+public class MoreActivity extends AppCompatActivity {
 
+    private static final String TAG = "TAG";
     private BottomNavigationView bottomNavView;
 
-    @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_main, container, false);
-
-        initViews(view);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_more);
+        initViews();
         initBottomNavView();
+    }
 
-        return view;
+    private void initViews() {
+        bottomNavView = findViewById(R.id.bottomNavView);
     }
 
     private void initBottomNavView() {
-        bottomNavView.setSelectedItemId(R.id.home);
+        Log.d(TAG, "initBottomNavView: started");
+        bottomNavView.setSelectedItemId(R.id.other);
         bottomNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home:
-                        break;
-                    case R.id.other:
-                        Intent intent = new Intent(getActivity(), MoreActivity.class);
+                        Intent intent = new Intent(MoreActivity.this, MainActivity.class);
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
+                        break;
+                    case R.id.other:
                         break;
                     default:
                         break;
@@ -48,9 +48,4 @@ public class MainFragment extends Fragment {
             }
         });
     }
-
-    private void initViews(View view) {
-        bottomNavView = view.findViewById(R.id.bottomNavView);
-    }
-
 }
