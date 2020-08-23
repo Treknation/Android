@@ -60,7 +60,6 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
                 intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
                 intent.putExtra("Position", position);
                 ((MainActivity) mContext).startActivityForResult(intent, 1);
-                mContext.startActivity(intent);
             }
         });
 
@@ -71,7 +70,6 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
                 intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
                 intent.putExtra("Position", position);
                 ((MainActivity) mContext).startActivityForResult(intent, 1);
-                mContext.startActivity(intent);
             }
         });
 
@@ -89,7 +87,6 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
                     intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
                     intent.putExtra("Position", position);
                     ((MainActivity) mContext).startActivityForResult(intent, 1);
-                    mContext.startActivity(intent);
                 }
             });
         }
