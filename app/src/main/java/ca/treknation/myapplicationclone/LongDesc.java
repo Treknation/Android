@@ -169,7 +169,35 @@ public class LongDesc extends AppCompatActivity {
 
     private void setData(Item item) {
         txtItemName.setText(item.getItemName());
-        txtLongDesc.setText(item.getItemLongDesc());
+        //txtLongDesc.setText(item.getItemLongDesc());
+
+        setTextViewHTML(txtLongDesc,item.getItemLongDesc());
+    }
+
+    protected void makeLinkClickable(SpannableStringBuilder strBuilder, final URLSpan span)
+    {
+        int start = strBuilder.getSpanStart(span);
+        int end = strBuilder.getSpanEnd(span);
+        int flags = strBuilder.getSpanFlags(span);
+        ClickableSpan clickable = new ClickableSpan() {
+            public void onClick(View view) {
+                //span.getURL(); -> to get the clicked URL
+                Toast.makeText(getApplicationContext(), "Link Clicked "+ span.getURL(), Toast.LENGTH_SHORT).show();
+            }
+        };
+        strBuilder.setSpan(clickable, start, end, flags);
+        strBuilder.removeSpan(span);
+    }
+
+    protected void setTextViewHTML(TextView text, Spanned html)
+    {
+        SpannableStringBuilder strBuilder = new SpannableStringBuilder(html);
+        URLSpan[] urls = strBuilder.getSpans(0, html.length(), URLSpan.class);
+        for(URLSpan span : urls) {
+            makeLinkClickable(strBuilder, span);
+        }
+        text.setText(strBuilder);
+        text.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
 //    protected void makeLinkClickable(SpannableStringBuilder strBuilder, final URLSpan span)
