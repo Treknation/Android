@@ -63,16 +63,16 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/txtFstDesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="17dp"
+                    android:fontFamily="@font/sourcesansproregular"
                     android:paddingStart="17dp"
                     android:paddingEnd="17dp"
-                    android:layout_marginStart="17dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginEnd="17dp"
                     android:text="@string/fst_desc"
-                    android:fontFamily="@font/sourcesansproregular"
                     android:textColor="@color/charcoal_grey"
                     android:textSize="12sp"
                     app:layout_constraintEnd_toEndOf="parent"

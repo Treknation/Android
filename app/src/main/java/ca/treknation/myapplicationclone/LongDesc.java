@@ -188,16 +188,16 @@ public class LongDesc extends AppCompatActivity {
                     btnInCanada.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent5 = new Intent(LongDesc.this, InCanada.class);
-                            startActivity(intent5);
+                            Intent intent8 = new Intent(LongDesc.this, InCanada.class);
+                            startActivity(intent8);
                         }
                     });
 
                     btnOutsideCanada.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
-                            Intent intent6 = new Intent(LongDesc.this, OutsideCanada.class);
-                            startActivity(intent6);
+                            Intent intent9 = new Intent(LongDesc.this, OutsideCanada.class);
+                            startActivity(intent9);
                         }
                     });
 
