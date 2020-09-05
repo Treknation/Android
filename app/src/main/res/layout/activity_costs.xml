@@ -32,9 +32,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:fontFamily="@font/circularstdmedium"
+            android:fontFamily="@font/sourcesansprobold"
             android:text="Get Your ECA"
-            android:textStyle="bold"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +48,8 @@
             android:layout_marginTop="52dp"
             android:text="Costs and Processing Time"
             android:textSize="12sp"
-            android:textStyle="bold"
+            android:fontFamily="@font/sourcesansprobold"
+            android:textColor="@color/charcoal_grey"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -123,8 +125,9 @@
                     android:layout_height="35dp"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center_vertical"
+                    android:fontFamily="@font/sourcesansprosemibold"
                     android:text="Organization"
-                    android:textColor="#46494c"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="12sp" />
 
                 <TextView
@@ -140,8 +143,9 @@
                     android:layout_height="35dp"
                     android:layout_gravity="center_horizontal"
                     android:gravity="center_vertical"
+                    android:fontFamily="@font/sourcesansprosemibold"
+                    android:textColor="@color/charcoal_grey"
                     android:text="Time"
-                    android:textColor="#46494c"
                     android:textSize="12sp" />
 
                 <TextView
@@ -201,8 +205,9 @@
                     android:gravity="center_vertical"
                     android:text="CES University of Toronto"
                     android:paddingStart="11dp"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:paddingEnd="11dp"
-                    android:textColor="#46494c"
                     android:textSize="12sp" />
 
                 <TextView
@@ -221,7 +226,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="14 Weeks"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="12sp" />
 
                 <TextView
@@ -263,7 +269,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="ICAS Canada"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="12sp" />
 
                 <TextView
@@ -282,7 +289,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="20 Weeks"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="12sp" />
 
                 <TextView
@@ -324,7 +332,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="WES"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="12sp" />
 
                 <TextView
@@ -343,7 +352,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="7 Weeks"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="12sp" />
 
                 <TextView
@@ -385,7 +395,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="IQAS"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="12sp" />
 
                 <TextView
@@ -404,7 +415,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="12 Weeks"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView
@@ -446,7 +458,8 @@
                     android:paddingEnd="11dp"
                     android:gravity="center_vertical"
                     android:text="ICES"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView
@@ -465,7 +478,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="8 Weeks"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView

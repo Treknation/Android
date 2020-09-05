@@ -22,6 +22,7 @@ public class Utils {
     String eca_short_desc = App.getContext().getString(R.string.eca_short_desc);
     String language_short_desc = App.getContext().getString(R.string.language_short_desc);
     String eligibility_short_desc = App.getContext().getString(R.string.eligibility_short_desc);
+    String crs_short_desc = App.getContext().getString(R.string.crs_short_desc);
     String pool_short_desc = App.getContext().getString(R.string.pool_short_desc);
     String ita_short_desc = App.getContext().getString(R.string.ita_short_desc);
     String checklist_short_desc = App.getContext().getString(R.string.checklist_short_desc);
@@ -45,6 +46,11 @@ public class Utils {
 
     String eligibility_long_desc = App.getContext().getString(R.string.eligibility_long_desc);
     Spanned styled_eligibility_long_desc = Html.fromHtml(eligibility_long_desc, Html.FROM_HTML_MODE_LEGACY);
+
+    //enter crs score long desc
+
+    String crs_long_desc = App.getContext().getString(R.string.crs_long_desc);
+    Spanned styled_crs_long_desc = Html.fromHtml(crs_long_desc, Html.FROM_HTML_MODE_LEGACY);
 
     String pool_long_desc = App.getContext().getString(R.string.pool_long_desc);
     Spanned styled_pool_long_desc = Html.fromHtml(pool_long_desc, Html.FROM_HTML_MODE_LEGACY);
@@ -75,16 +81,17 @@ public class Utils {
     private void initData() {
         //TODO: add initial data
         allItems.add(new Item(1, "Overview", overview_short_desc, false, styled_overview_long_description));
-        allItems.add(new Item(2, "Find your NOC", noc_short_desc, false, styled_noc_long_description));
-        allItems.add(new Item(3, "Get your ECA", eca_short_desc, false, styled_eca_long_description));
-        allItems.add(new Item(4, "Language Tests", language_short_desc, false, styled_language_long_desc));
-        allItems.add(new Item(5, "Check Eligibility", eligibility_short_desc, false, styled_eligibility_long_desc));
-        allItems.add(new Item(6, "Enter Express Entry Pool", pool_short_desc, false, styled_pool_long_desc));
-        allItems.add(new Item(7, "Receiving ITA", ita_short_desc, false, styled_ita_long_desc));
-        allItems.add(new Item(8, "Document Checklist", checklist_short_desc, false, styled_checklist_long_desc));
-        allItems.add(new Item(9, "E-APR Fees", fees_short_desc, false, styled_fees_long_desc));
-        allItems.add(new Item(10, "AOR to PPR", ppr_short_desc, false, styled_ppr_long_desc));
-        allItems.add(new Item(11, "Prepare for Landing", landing_short_desc, false, styled_landing_long_desc));
+        allItems.add(new Item(2, "1. Find your NOC", noc_short_desc, false, styled_noc_long_description));
+        allItems.add(new Item(3, "2. Get your ECA", eca_short_desc, false, styled_eca_long_description));
+        allItems.add(new Item(4, "3. Language Tests", language_short_desc, false, styled_language_long_desc));
+        allItems.add(new Item(5, "4. Check Eligibility", eligibility_short_desc, false, styled_eligibility_long_desc));
+        allItems.add(new Item(6, "5. Calculate CRS Score", crs_short_desc, false, styled_crs_long_desc));
+        allItems.add(new Item(7, "6. Enter Express Entry Pool", pool_short_desc, false, styled_pool_long_desc));
+        allItems.add(new Item(8, "7. Receive your ITA", ita_short_desc, false, styled_ita_long_desc));
+        allItems.add(new Item(9, "8. Document Checklist", checklist_short_desc, false, styled_checklist_long_desc));
+        allItems.add(new Item(10, "9. E-APR Fees", fees_short_desc, false, styled_fees_long_desc));
+        allItems.add(new Item(11, "10. AOR to PPR", ppr_short_desc, false, styled_ppr_long_desc));
+        allItems.add(new Item(12, "11. Prepare for Landing", landing_short_desc, false, styled_landing_long_desc));
     }
 
     public static Utils getInstance() {

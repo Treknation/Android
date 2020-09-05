@@ -29,7 +29,8 @@ public class LongDesc extends AppCompatActivity {
     private static final String TAG = "TAG";
 
     private TextView txtItemName, txtLongDesc;
-    private Button btnMarkComplete, btnCosts, btnSubmitEE, btnTestResult, btnTestCost, btnCEC, btnFSW, btnFST;
+    private Button btnMarkComplete, btnCosts, btnSubmitEE, btnTestResult, btnTestCost, btnCEC, btnFSW, btnFST, btnInCanada, btnOutsideCanada;
+    private ImageView btnCostsArrow, btnSubmitEEArrow, btnTestResultArrow, btnTestCostArrow, btnCECArrow, btnFSWArrow, btnFSTArrow, btnInCanadaArrow, btnOutsideCanadaArrow;
     private ImageView btnBackArrow;
     private Context lContext;
 
@@ -80,9 +81,13 @@ public class LongDesc extends AppCompatActivity {
                 if (itemID != 3) {
                     btnCosts.setVisibility(View.GONE);
                     btnSubmitEE.setVisibility(View.GONE);
+                    btnCostsArrow.setVisibility(View.GONE);
+                    btnSubmitEEArrow.setVisibility(View.GONE);
                 } else {
                     btnCosts.setVisibility(View.VISIBLE);
                     btnSubmitEE.setVisibility(View.VISIBLE);
+                    btnCostsArrow.setVisibility(View.VISIBLE);
+                    btnSubmitEEArrow.setVisibility(View.VISIBLE);
 
                     btnCosts.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -103,9 +108,13 @@ public class LongDesc extends AppCompatActivity {
                 if ((itemID != 4)) {
                     btnTestResult.setVisibility(View.GONE);
                     btnTestCost.setVisibility(View.GONE);
+                    btnTestResultArrow.setVisibility(View.GONE);
+                    btnTestCostArrow.setVisibility(View.GONE);
                 } else {
                     btnTestResult.setVisibility(View.VISIBLE);
                     btnTestCost.setVisibility(View.VISIBLE);
+                    btnTestResultArrow.setVisibility(View.VISIBLE);
+                    btnTestCostArrow.setVisibility(View.VISIBLE);
 
                     btnTestResult.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -128,10 +137,16 @@ public class LongDesc extends AppCompatActivity {
                     btnCEC.setVisibility(View.GONE);
                     btnFST.setVisibility(View.GONE);
                     btnFSW.setVisibility(View.GONE);
+                    btnCECArrow.setVisibility(View.GONE);
+                    btnFSTArrow.setVisibility(View.GONE);
+                    btnFSWArrow.setVisibility(View.GONE);
                 } else {
                     btnCEC.setVisibility(View.VISIBLE);
                     btnFST.setVisibility(View.VISIBLE);
                     btnFSW.setVisibility(View.VISIBLE);
+                    btnCECArrow.setVisibility(View.VISIBLE);
+                    btnFSTArrow.setVisibility(View.VISIBLE);
+                    btnFSWArrow.setVisibility(View.VISIBLE);
 
                     btnCEC.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -154,6 +169,35 @@ public class LongDesc extends AppCompatActivity {
                         public void onClick(View v) {
                             Intent intent7 = new Intent(LongDesc.this, Fsw.class);
                             startActivity(intent7);
+                        }
+                    });
+
+                }
+
+                if ((itemID != 12)) {
+                    btnInCanada.setVisibility(View.GONE);
+                    btnOutsideCanada.setVisibility(View.GONE);
+                    btnInCanadaArrow.setVisibility(View.GONE);
+                    btnOutsideCanadaArrow.setVisibility(View.GONE);
+                } else {
+                    btnInCanada.setVisibility(View.VISIBLE);
+                    btnOutsideCanada.setVisibility(View.VISIBLE);
+                    btnInCanadaArrow.setVisibility(View.VISIBLE);
+                    btnOutsideCanadaArrow.setVisibility(View.VISIBLE);
+
+                    btnInCanada.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent5 = new Intent(LongDesc.this, InCanada.class);
+                            startActivity(intent5);
+                        }
+                    });
+
+                    btnOutsideCanada.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent intent6 = new Intent(LongDesc.this, OutsideCanada.class);
+                            startActivity(intent6);
                         }
                     });
 
@@ -182,7 +226,10 @@ public class LongDesc extends AppCompatActivity {
         ClickableSpan clickable = new ClickableSpan() {
             public void onClick(View view) {
                 //span.getURL(); -> to get the clicked URL
-                Toast.makeText(getApplicationContext(), "Link Clicked "+ span.getURL(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(getApplicationContext(), "Link Clicked "+ span.getURL(), Toast.LENGTH_SHORT).show();
+                Intent intent5 = new Intent(getApplicationContext(), WebsiteActivity.class);
+                intent5.putExtra("Url 1", span.getURL());
+                startActivity(intent5);
             }
         };
         strBuilder.setSpan(clickable, start, end, flags);
@@ -200,45 +247,6 @@ public class LongDesc extends AppCompatActivity {
         text.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
-//    protected void makeLinkClickable(SpannableStringBuilder strBuilder, final URLSpan span)
-//    {
-////        int start = strBuilder.getSpanStart(span);
-////        int end = strBuilder.getSpanEnd(span);
-////        int flags = strBuilder.getSpanFlags(span);
-//        ClickableSpan clickable = new ClickableSpan() {
-//            public void onClick(View view) {
-//                // Do something with span.getURL() to handle the link click...
-//                Intent intent = new Intent(LongDesc.this, WebsiteActivity.class);
-//                startActivity(intent);
-//            }
-//        };
-//        strBuilder.setSpan(clickable, 1465, 1468, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-//        strBuilder.removeSpan(span);
-//    }
-//
-//    protected void setTextViewHTML(TextView txtLongDesc, String html)
-//    {
-//        CharSequence sequence = Html.fromHtml(getResources().getString(R.string.overview_long_description));
-//        SpannableStringBuilder strBuilder = new SpannableStringBuilder(sequence);
-//        URLSpan[] urls = strBuilder.getSpans(0, sequence.length(), URLSpan.class);
-//        for(URLSpan span : urls) {
-//            makeLinkClickable(strBuilder, span);
-//        }
-//        txtLongDesc.setText(strBuilder);
-//        txtLongDesc.setMovementMethod(LinkMovementMethod.getInstance());
-//    }
-
-//    SpannableStringBuilder ss = new SpannableStringBuilder(getResources().getString(R.string.overview_long_description));
-//    ClickableSpan clickableSpan1 = new ClickableSpan() {
-//        @Override
-//        public void onClick(@NonNull View widget) {
-//            Toast.makeText(LongDesc.this, "This is test", Toast.LENGTH_SHORT).show();
-//        }
-//    };
-//
-//    ss.Factory
-
-
     private void initViews() {
         txtItemName = findViewById(R.id.txtItemName);
         txtLongDesc = findViewById(R.id.txtLongDesc);
@@ -251,5 +259,17 @@ public class LongDesc extends AppCompatActivity {
         btnCEC = findViewById(R.id.btnCEC);
         btnFSW = findViewById(R.id.btnFSW);
         btnFST = findViewById(R.id.btnFST);
+        btnInCanada = findViewById(R.id.btnInCanada);
+        btnOutsideCanada = findViewById(R.id.btnOutsideCanada);
+
+        btnCostsArrow = findViewById(R.id.btnCostsArrow);
+        btnSubmitEEArrow = findViewById(R.id.btnSubmitEEArrow);
+        btnTestResultArrow = findViewById(R.id.btnTestResultArrow);
+        btnTestCostArrow = findViewById(R.id.btnTestCostArrow);
+        btnCECArrow = findViewById(R.id.btnCECArrow);
+        btnFSWArrow = findViewById(R.id.btnFSWArrow);
+        btnFSTArrow = findViewById(R.id.btnFSTArrow);
+        btnInCanadaArrow = findViewById(R.id.btnInCanadaArrow);
+        btnOutsideCanadaArrow = findViewById(R.id.btnOutsideCanadaArrow);
     }
 }

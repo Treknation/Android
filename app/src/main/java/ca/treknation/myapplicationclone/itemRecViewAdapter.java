@@ -75,7 +75,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
 
 
         if (items.get(position).isViewed) {
-            holder.collapsedRelLayout.setBackgroundColor(mContext.getResources().getColor(R.color.blue));
+            holder.collapsedRelLayout.setBackgroundColor(mContext.getResources().getColor(R.color.dark_slate_blue));
             holder.expandedRelLayout.setVisibility(View.INVISIBLE);
             items.get(position).setExpanded(false);
             holder.txtItem.setTextColor(mContext.getResources().getColor(R.color.white));

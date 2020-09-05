@@ -1,21 +1,15 @@
 <resources>
     <string name="app_name">TrekNation</string>
-    <string name="overview_short_description">You can become a Permanent Resident of Canada through the Express Entry system which has three programs Federal Skilled Worker, Canadian Experience Class and Federal Skilled Trades.</string>
-    <string name="noc_short_desc">NOC stands for National Occupation Classification. It helps to determine your job code. There are 5 types of NOC groups: NOC 0, A, B, C and D</string>
+    <string name="overview_short_description">You can become a Permanent Resident (PR) of Canada through the Express Entry system which has three programs Federal Skilled Worker (FSW), Canadian Experience Class (CEC) and Federal Skilled Trades (FST).</string>
+    <string name="noc_short_desc">NOC stands for National Occupation Classification. It helps to determine your job code. There are 5 types of NOC groups: NOC 0, A, B, C and D.</string>
     <string name="eca_short_desc">An educational credential assessment (ECA) is used to verify that your foreign degree, diploma, or certificate (or other proof of your credential) is valid and equal to a Canadian one. You would need an ECA only if you have a non-Canadian degree and must be issued for Immigration purposes.</string>
-    <string name="language_short_desc">As a user, I should be able to take a language test so that I can provide my score for express entry programs. Express Entry uses CLB(Canadian Language Benchmark) as a method of checking your language level based on your test results.</string>
-    <string name="eligibility_short_desc">In order to qualify for Express Entry for one of the three programs, you must meet the minimum requirements. Click to learn more about these requirements.</string>
+    <string name="language_short_desc">In this step, you will be required to take a language test in English and/or French and score a number of points to be eligible for Express Entry programs.</string>
+    <string name="eligibility_short_desc">In order to qualify for Express Entry for one of the three programs, you must meet the minimum requirements. Check the details to learn more about these requirements.</string>
+    <string name="crs_short_desc">CRS Score is the score used by IRCC to rank candidates in the Express Entry pool. You can check your CRS score through the link in details.</string>
     <string name="pool_short_desc">In this step, you will now create your IRCC secure account and get into the pool of applicants for your EE program.</string>
-    <string name="ita_short_desc">Once you have created your online profile you would need to wait for an ITA(Invitation to Apply). You will get an invite if your CRS score is greater than or equal to the cut-off of the draw.</string>
+    <string name="ita_short_desc">Once you have created your online profile you would need to wait for an ITA (Invitation to Apply). You will get an invite if your CRS score is greater than or equal to the cut-off of the draw.</string>
     <string name="checklist_short_desc">Once you get the ITA and fill out the post-ITA application forms, a personalized document checklist will be generated for your profile. You will have 60 days to gather all documents and upload the scanned copies.</string>
-    <string name="fees_short_desc">Once you fill out the online form and upload the documents in the last step, you will be shown fees you need to pay for your e-APR (Electronic Application for Permanent Residence). The fees are of the following types\n" +
-    "\n"
-        <ul>
-            <li><i>Processing</i> fee for you and your family members\n</li>
-            <li>Right of Permanent residence fee\n</li>
-            <li>Biometrics fee</li>
-        </ul>
-    </string>
+    <string name="fees_short_desc">Once you fill out the online form and upload the documents in the last step, you will be shown fees you need to pay for your e-APR (Electronic Application for Permanent Residence).</string>
     <string name="ppr_short_desc">After submitting your e-APR, you will receive an Acknowledgement of Receipt (AOR). This is the AOR date and is the date from when your 6 months intended processing time begins. Once IRCC has reviewed your biometrics, background checks, and medical examinations evaluations you will get a golden email for Passport Request (PPR).</string>
     <string name="landing_short_desc">Congratulations!! now that you have received your CoPR you are just one step away from getting your PR card. The next steps will depend on whether you are inside or outside of Canada.</string>
 
@@ -42,7 +36,7 @@
         &lt;br /&gt;
         It usually takes 6 months after you receive your ITA.&lt;br /&gt;
         &lt;br /&gt;
-        It may take additional time for other processes such as educational document verification, police verification, medical test and language test. These processes can take up to an additional 9 weeks. We suggest you visit this link and check your processing time - here&lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html">Click me!&lt;//a>.&lt;br /&gt;
+        It may take additional time for other processes such as educational document verification, police verification, medical test and language test. These processes can take up to an additional 9 weeks. We suggest you visit this link and check your processing time - &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html">here&lt;//a>.&lt;br /&gt;
     </string>
 
     <string name="noc_long_description">
@@ -60,9 +54,9 @@
         &lt;br /&gt;
         If you are applying for Express Entry, your job and the work you have done in the past must be &lt;b>Skill Type 0 or level A or B.&lt;/b> &lt;br /&gt;
         &lt;br /&gt;
-        You can use this site for finding your correct NOC code.&lt;br /&gt;
+        You can use &lt;a href="https://noc.esdc.gc.ca/Home/Welcome/4f6368c7a3b44140bc06c177bfebbaa0?GoCTemplateCulture=en-CA">this&lt;//a> site for finding your correct NOC code.&lt;br /&gt;
         &lt;br /&gt;
-        Another option would be to use the Job Bank website. Find a job opening that matches your current job (or any previous job) and whose job duties match yours. On the job opening page, you can find the corresponding NOC code in the \"Job Market Information\" page.&lt;br /&gt;
+        Another option would be to use the &lt;a href="https://noc.esdc.gc.ca/Home/Welcome/4f6368c7a3b44140bc06c177bfebbaa0?GoCTemplateCulture=en-CA">Job Bank&lt;//a> website. Find a job opening that matches your current job (or any previous job) and whose job duties match yours. On the job opening page, you can find the corresponding NOC code in the \"Job Market Information\" page.&lt;br /&gt;
     </string>
 
     <string name="eca_long_description">
@@ -83,7 +77,7 @@
         &lt;br /&gt;
         • Comparative Education Service – University of Toronto School of Continuing Studies&lt;br /&gt;
         • International Credential Assessment Service of Canada&lt;br /&gt;
-        • World Education Services&lt;br /&gt;
+        • World Education Services(WES)&lt;br /&gt;
         • International Qualifications Assessment Service (IQAS)&lt;br /&gt;
         • International Credential Evaluation Service&lt;br /&gt;
         &lt;br /&gt;
@@ -95,54 +89,83 @@
         &lt;br /&gt;
         An ECA is valid for a period of 5 years from the date it is issued.&lt;br /&gt;
         &lt;br /&gt;
-        Costs and Processing time:
-        Cost to get an assessment range between 200$ to 220$ depending on the organization you get the assessment from. The processing times vary as per the organizations shown below
     </string>
     <string name="language_long_desc">
         For all the three Express Entry programs, you need to take English and/or French test(s) and score a minimum score to be eligible.&lt;br /&gt;
         &lt;br /&gt;
-        FSW&lt;br /&gt;
+        &lt;b>FSW&lt;/b>&lt;br /&gt;
         • First Official Language: English CLB 7;  French NCLC7&lt;br /&gt;
         • Second Official Language: CLB or NCLC 5&lt;br /&gt;
         &lt;br /&gt;
-        CEC&lt;br /&gt;
+        &lt;b>CEC&lt;/b>&lt;br /&gt;
         • NOC 0 or A: English CLB 7; French NCLC 7&lt;br /&gt;
         • NOC B: CLB or NCLC 5&lt;br /&gt;
         &lt;br /&gt;
-        FST&lt;br /&gt;
+        &lt;b>FST&lt;/b>&lt;br /&gt;
         • English: Speaking and Listening CLB 5; Reading and Writing CLB 4&lt;br /&gt;
         • French: Speaking and Listening NCLC 5; Reading and Writing NCLC 4&lt;br /&gt;
         &lt;br /&gt;
         Minimum language requirements in IELTS for getting maximum points in express entry are:&lt;br /&gt;
-        &lt;br /&gt;
         • Listening: 8.5&lt;br /&gt;
-        &lt;br /&gt;
         • Reading: 8&lt;br /&gt;
-        &lt;br /&gt;
         • Writing: 7.5&lt;br /&gt;
-        &lt;br /&gt;
         • Speaking: 7.5&lt;br /&gt;
         &lt;br /&gt;
         &lt;br /&gt;
-        IRCC-Approved Tests&lt;br /&gt;
+        &lt;b>IRCC-Approved Tests&lt;/b>&lt;br /&gt;
         &lt;br /&gt;
         There two approved English tests and two for French:&lt;br /&gt;
         &lt;br /&gt;
         • IRCC-approved English tests:&lt;br /&gt;
         &lt;br /&gt;
-          1.  IELTS&lt;br /&gt;
-          2. CELPIP&lt;br /&gt;
+          1. &lt;a href="http://www.ielts.org/">IELTS&lt;//a>&lt;br /&gt;
+          2. &lt;a href="http://www.celpiptest.ca/">CELPIP&lt;//a>&lt;br /&gt;
         &lt;br /&gt;
         • IRCC-approved French tests:&lt;br /&gt;
         &lt;br /&gt;
-          1. IELTS&lt;br /&gt;
-          2. CELPIP&lt;br /&gt;
+          1. &lt;a href="https://www.lefrancaisdesaffaires.fr/tests-diplomes/test-evaluation-francais-tef/tef-canada/">TEF Canada&lt;//a>&lt;br /&gt;
+          2. &lt;a href="http://www.ciep.fr/tcf-canada">TCF Canada&lt;//a>&lt;br /&gt;
         &lt;br /&gt;
         For Express Entry, you need to take the general category for the above-mentioned language tests.
     </string>
 
     <string name="eligibility_long_desc">
         There are minimum eligibility requirements for all 3 programs within Express Entry that need to be met by the applicant as shown below:
+    </string>
+
+    <string name="crs_long_desc">
+        Express Entry is a competitive system that chooses applicants with the highest CRS score in the pool for giving ITA. You should try to achieve the highest points possible to increase your chances of getting an ITA. Use this link to check your &lt;a href="https://www.cic.gc.ca/english/immigrate/skilled/crs-tool.asp">CRS Score&lt;//a>. Below are some of the ways of increasing your CRS score.&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Language Proficiency&lt;/b>&lt;br /&gt;
+        &lt;br /&gt;
+        • Increasing the points with the language test is the easiest and surest way of increasing the CRS score. So, it\'s best if you give the language test after sufficient practice. For example, increasing your score from CLB 7 to CLB 9 in each section increases your score by 14 points per section. So, in total your points increase by a total of 56 (14 x 4).&lt;br /&gt;
+        • You can also earn extra points for your Secondary language abilities. You can earn 4 additional points if you get the score in the below range:&lt;br /&gt;¬
+        &lt;br /&gt;
+            • Speaking, Listening and Writing: CLB 5 - CLB 9&lt;br /&gt;
+            • Reading: CLB 4 - CLB 9&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Education Points&lt;/b>&lt;br /&gt;
+        &lt;br /&gt;
+        • If you have a master\'s degree or have more than 1 degree from outside Canada, it is beneficial to submit the education Assessment for all the degrees and not just for the highest degree as it gives you points for the additional degrees as well. This does not cost an additional amount if done in one take.&lt;br /&gt;
+        • You can earn 15 points if you get a 1-year Canadian degree and 30 points if your Canadian degree is 2 years or more in duration.&lt;br /&gt;
+        • You earn an additional 50 points if Canadian education combined with Canadian work experience.&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Non - Canadian Work Experience&lt;/b>&lt;br /&gt;
+        &lt;br /&gt;
+        • If your work experience outside Canada is less than 3 years, you can wait till you have completed 3 years. This will help you gain additional points in work experience. Receiving CLB 9 in ECA, along with 3 years of work experience can also add additional points.&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Spouse Points&lt;/b>&lt;br /&gt;
+        &lt;br /&gt;
+        • Depending on who is the primary applicant, your total points can change. If you are the primary applicant and your age is 40 years and your spouse’s age is 28 years, all other factors being the same, it could be beneficial to make your spouse the primary applicant since she gets additional points for age.&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Job Offer Points&lt;/b>&lt;br /&gt;
+        &lt;br /&gt;
+        • You can earn 200 points if you have a job offer that belongs to NOC 00(Senior Management) and 50 points if have a job offer that belongs to NOC 0, A, or B.&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Provincial Nominee Programs&lt;/b>&lt;br /&gt;
+        &lt;br /&gt;
+        • If you are short of points even after trying all the above methods, you should try to apply for PNP. Getting a nomination through PNP gives you an additional 600 points. You can find more information for PNP for each of the provinces at this &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/works.html">link&lt;//a>.&lt;br /&gt;
+        &lt;br /&gt;
     </string>
 
     <string name="pool_long_desc">
@@ -155,17 +178,9 @@
         In order to create an express entry profile, you would need to create a GC Key account.&lt;br /&gt;
         &lt;br /&gt;
         &lt;br /&gt;
+        &lt;b>Steps&lt;/b>&lt;br /&gt;
         &lt;br /&gt;
-        Steps&lt;br /&gt;
-        &lt;br /&gt;
-        • Increasing the points with the language test is the easiest and surest way of increasing the CRS score. So, it\'s best if you give the language test after sufficient practice. For example, increasing your score from CLB 7 to CLB 9 in each section increases your score by 14 points per section. So, in total your points increase by a total of 56 (14 x 4).
-        • You can also earn extra points for your Secondary language abilities. You can earn 4 additional points if you get the score in the below range:&lt;br /&gt;
-            o   Speaking, Listening and Writing: CLB 		5 - CLB 9&lt;br /&gt;
-            o   Reading: CLB 4 - CLB 9&lt;br /&gt;
-        &lt;br /&gt;
-        Education Points&lt;br /&gt;
-        &lt;br /&gt;
-        • Create GC key account by going to this page(Please do not choose sign in with partner account) . Please remember the 4 security questions and answers thoroughly since you will be asked each time you log in.&lt;br /&gt;
+        • Create GC key account by going to this &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/account.html">page&lt;//a>(Please do not choose sign in with partner account) . Please remember the 4 security questions and answers thoroughly since you will be asked each time you log in.&lt;br /&gt;
         &lt;br /&gt;
         • Once you create a GC key account click on an Express Entry button to begin filling your profile.&lt;br /&gt;
         &lt;br /&gt;
@@ -190,11 +205,11 @@
         &lt;br /&gt;
         Once you receive the ITA you can either:&lt;br /&gt;
         &lt;br /&gt;
-        • Accept it - If you choose to accept it you will have 60 days to apply for your Permanent Residence&lt;br /&gt;
+        &lt;b>• Accept it -&lt;/b> If you choose to accept it you will have 60 days to apply for your Permanent Residence&lt;br /&gt;
         &lt;br /&gt;
-        • Decline it - If you choose to decline your profile will be moved back to the application pool&lt;br /&gt;
+        &lt;b>• Decline it -&lt;/b> If you choose to decline your profile will be moved back to the application pool&lt;br /&gt;
         &lt;br /&gt;
-        • Do no respond - If you do not respond your profile will expire and you will no longer be eligible for future draws&lt;br /&gt;
+        &lt;b>• Do no respond -&lt;/b> If you do not respond your profile will expire and you will no longer be eligible for future draws&lt;br /&gt;
         &lt;br /&gt;
         If you accept the ITA you will need to -&lt;br /&gt;
         Fill out a form similar to ones in the Express Entry profile. Instructions to fill out the form are mentioned in the ITA pdf file received in the messages section of your profile. You will be asked for additional details. For e.g. Provide Address and Travel history for the past 10 years or from your 18th birthday. You would need to provide a Letter of Explanation if necessary.&lt;br /&gt;
@@ -216,7 +231,7 @@
         &lt;b>Mandatory documents&lt;/b>&lt;br /&gt;
         • Police Certification&lt;br /&gt;
         • Medical Exam&lt;br /&gt;
-        • Proof of funds&lt;br /&gt;
+        • &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html">Proof of funds&lt;//a>&lt;br /&gt;
         &lt;br /&gt;
         &lt;b>Other documents as applicable&lt;/b>&lt;br /&gt;
         • Work experience&lt;br /&gt;
@@ -231,8 +246,8 @@
         &lt;br /&gt;
         If one of your documents is in a language other than English or French, you must also upload:&lt;br /&gt;
         • An English or French translation&lt;br /&gt;
-        • A certified photocopy of the original document&lt;br /&gt;
-        • An affidavit from the person who completed the translation (if they’re not a certified translator)&lt;br /&gt;
+        • A &lt;a href="http://www.cic.gc.ca/english/helpcentre/glossary.asp#certified_photocopy">certified photocopy&lt;//a> of the original document&lt;br /&gt;
+        • An &lt;a href="http://www.cic.gc.ca/english/helpcentre/glossary.asp#affidavit">affidavit&lt;//a> from the person who completed the translation (if they’re not a &lt;a href="http://www.cic.gc.ca/english/helpcentre/glossary.asp#certified_translator">certified translator&lt;//a>)&lt;br /&gt;
         &lt;br /&gt;
         If a certified translator completed your translation:&lt;br /&gt;
         &lt;br /&gt;
@@ -241,9 +256,110 @@
         &lt;br /&gt;
         If you feel like a document you are submitting might raise the slightest question from an immigration officer, you should add a Letter of Explanation (LoE) (sample in the link) to your documents. For example, if it concerns your passport section, then add your LoE to the PDF file that you will upload to the passport section.&lt;br /&gt;
     </string>
-    <string name="fees_long_desc"></string>
-    <string name="ppr_long_desc"></string>
-    <string name="landing_long_desc"></string>
+    <string name="fees_long_desc">
+        There are 3 types of fees that you would need to pay for your e-APR:&lt;br /&gt;
+        &lt;br /&gt;
+        • Processing fees: You need to pay a processing fee for yourself and your dependents who are part of the application. Usually, the fee is around 825 CAD per person and 225 CAD for a dependent child&lt;br /&gt;
+        &lt;br /&gt;
+        • Right of Permanent Residence fee: You would need to pay 500 CAD for the Right to Permanent residence fee. You can pay the fee along with the processing fee to avoid delays or wait until IRCC approves your application. We recommend you pay this fee along with the Processing Fee. Note that this fee is paid per application hence you will not be required to pay for each individual in your application. This fee can be refunded if your application is rejected&lt;br /&gt;
+        &lt;br /&gt;
+        • Biometrics fees: In most cases, you must pay a biometrics fee when you submit your application. Otherwise, you may experience delays. The biometrics fee covers the cost of collecting fingerprints and a digital photo and usually costs 85 CAD per person. After you pay the biometrics fee with a complete application, IRCC will send you a letter confirming that you need to give your biometrics and where you can go. You must show this letter when you give your biometrics. You must give your biometrics in person. Make sure to book an appointment if this service is offered. Find a &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/campaigns/biometrics/where-to-give-biometrics.html">collection point&lt;//a> close to you.&lt;br /&gt;
+        &lt;br /&gt;
+        You can see the complete fee list &lt;a href="https://www.cic.gc.ca/english/information/fees/fees.asp#rprf">here&lt;//a>&lt;br /&gt;
+        &lt;br /&gt;
+        Refunds&lt;br /&gt;
+        If your application isn’t complete, you can get a refund for:&lt;br /&gt;
+        ·       processing fee&lt;br /&gt;
+        ·       right of permanent residence fee (if you’ve paid it)&lt;br /&gt;
+        You won’t get a refund of the processing fee once IRCC starts processing your application.&lt;br /&gt;
+        &lt;br /&gt;
+        After you submit your application, you can use this &lt;a href="http://www.cic.gc.ca/english/contacts/web-form.asp">Webform&lt;//a> if you need to report important changes in your application&lt;br /&gt;
+    </string>
+    <string name="ppr_long_desc">
+        After you submit your e-APR you get an AOR which is a confirmation that your application was received by IRCC and they have created a file with your application number. After you submit your application, you can use this &lt;a href="http://www.cic.gc.ca/english/contacts/web-form.asp">Webform&lt;//a> if you need to report important changes to your application such as:&lt;br /&gt;
+        &lt;br /&gt;
+        • Changes in address, telephone number, email or other contact information&lt;br /&gt;
+        • Births or deaths in your immediate family&lt;br /&gt;
+        • Marriages or divorces&lt;br /&gt;
+        • Adoptions&lt;br /&gt;
+        • Changes to your job or job offer&lt;br /&gt;
+        • A new educational credential&lt;br /&gt;
+        • Updated language test results&lt;br /&gt;
+        &lt;br /&gt;
+        IRCC will communicate with you through your online account to:&lt;br /&gt;
+        &lt;br /&gt;
+        • Tell you to give your biometrics and medical&lt;br /&gt;
+        • Confirm that they have reviewed your application&lt;br /&gt;
+        • Send you updates on the status of your application&lt;br /&gt;
+        • Ask you for more documents, if necessary&lt;br /&gt;
+        • Set up an interview, if necessary&lt;br /&gt;
+        • Tell you what you need to do and what will happen next&lt;br /&gt;
+        &lt;br /&gt;
+        IRCC will decide on your application depending on:&lt;br /&gt;
+        &lt;br /&gt;
+        • Whether you meet the eligibility criteria for the program&lt;br /&gt;
+        • Whether you are admissible to Canada, based on the results of your&lt;br /&gt;
+            • Medical exam&lt;br /&gt;
+            • Police certificates&lt;br /&gt;
+            • Background checks&lt;br /&gt;
+        &lt;br /&gt;
+        If your application is Rejected and you would like to be considered for future rounds, then:&lt;br /&gt;
+        &lt;br /&gt;
+        • Fill out and &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/submit-profile.html">submit a new Express Entry profile&lt;//a>&lt;br /&gt;
+        • Meet the eligibility criteria&lt;br /&gt;
+        • Be accepted into the pool again&lt;br /&gt;
+        &lt;br /&gt;
+        If your application is approved then you would need to send your passport to IRCC, who will then mail you a:&lt;br /&gt;
+        &lt;br /&gt;
+        • Confirmation of Permanent Residence (COPR)&lt;br /&gt;
+        • A permanent resident visa (if you are from a country that requires a visa)&lt;br /&gt;
+        &lt;br /&gt;
+        Your COPR will have information about who you are, as well as your photograph. Your COPR is valid for a limited time so use it before it expires.&lt;br /&gt;
+        &lt;br /&gt;
+    </string>
+    <string name="landing_long_desc">
+        If you are already in Canada&lt;br /&gt;
+        &lt;br /&gt;
+        IRCC contact you and let you know what to do next.&lt;br /&gt;
+        You’ll need to have a short interview with an officer. You have two options for your interview:&lt;br /&gt;
+        • Make an appointment at one of our offices in Canada (best option)&lt;br /&gt;
+        • Go to a Canadian “port of entry” (border crossing), and present:&lt;br /&gt;
+            • Proof that you have the funds to support yourself and your family&lt;br /&gt;
+            • Your Confirmation of Permanent Residence 	(COPR) and your permanent resident visa (if we gave you one)&lt;br /&gt;
+        &lt;br /&gt;
+        During the interview the officer will:&lt;br /&gt;
+        • Make sure all your documents are valid&lt;br /&gt;
+        • Ask you a few questions to make sure you still meet the terms to immigrate to Canada&lt;br /&gt;
+        • Confirm your Canadian mailing address, so we can mail your permanent resident card (PR card)&lt;br /&gt;
+        &lt;br /&gt;
+        If you change your address within 180 days of getting your status, you must tell IRCC using the Webform.&lt;br /&gt;
+        &lt;br /&gt;
+        If you’re outside Canada&lt;br /&gt;
+        &lt;br /&gt;
+        There are things you can do to prepare for life in Canada:&lt;br /&gt;
+        • Use free pre-arrival services, which help you:&lt;br /&gt;
+            • Find out more about living and working in Canada&lt;br /&gt;
+        • Take steps to get recognition in Canada for your:&lt;br /&gt;
+            • Education&lt;br /&gt;
+            • Professional licences/certificates&lt;br /&gt;
+        • Read about living and finding work in Canada&lt;br /&gt;
+        &lt;br /&gt;
+        When you arrive in Canada&lt;br /&gt;
+        You must have:&lt;br /&gt;
+        • Your valid passport and/or travel documents&lt;br /&gt;
+            • Your passport must be a regular, private citizen passport&lt;br /&gt;
+            • You can’t immigrate to Canada with a diplomatic, government service or public affairs passport&lt;br /&gt;
+        • Your Confirmation of Permanent Residence (COPR) and your permanent resident visa (if they  gave you one)&lt;br /&gt;
+        • Proof that you have the funds to support yourself and your family after you arrive in Canada&lt;br /&gt;
+        &lt;br /&gt;
+        When you arrive in Canada, you’ll meet an officer from the Canada Border Services Agency (CBSA). The officer will:&lt;br /&gt;
+        • Make sure you’re entering Canada before or on the expiry date shown on your COPR&lt;br /&gt;
+        • Make sure that you are the same person who was approved to travel to Canada (we may use your biometrics to do this)&lt;br /&gt;
+        • Ask to see your passport and other travel documents&lt;br /&gt;
+        • Ask you a few questions to make sure you still meet the terms to immigrate to Canada&lt;br /&gt;
+            • The questions will be similar to the ones you answered when you applied&lt;br /&gt;
+        &lt;br /&gt;
+    </string>
 
     <!-- TODO: Remove or change this placeholder text -->
 
@@ -314,12 +430,30 @@
         "\n"
         • No plans to live in Quebec"\n"
         "\n"
-        • You must show you have enough funds for you and your family to settle in Canada unless you are able to legally work in Canada and have a valid job offer. See more<a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/federal-skilled-workers/six-selection-factors-federal-skilled-workers.html">Click me!</a>."\n"
+        • You must show you have enough funds for you and your family to settle in Canada unless you are able to legally work in Canada and have a valid job offer. See more &lt;a href="http://www.google.com">See More&lt;//a>."\n"
         "\n"
         "\n"
         You can check your points by visiting the this link."\n"
     </string>
 
+
+    <string name="about_us_long_desc">
+        TrekNation was born out a necessity by a slew of problems faced by its founder as they were going through the immigration process. We engaged overpriced consultants for thousands of dollars but most of the leg work was asked to be done by us. We scoured the internet for a simple step by step process to understand the process but we ended up reading mighty long pages without any natural flow and eventually ended up confused. So we came up with the idea to help our users navigate through the hurdles of the immigration process through a self serve mobile app which would guide the users through a step by step process.
+    </string>
+
+    <string name="disclaimer_long_desc">
+        The information provided on Treknation app is for general informational purposes only. All information on the app is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability or completeness of any information on the Site.&lt;br /&gt;
+        &lt;br /&gt;
+        Under no circumstance shall we have any liability to you for any loss or damage of any kind incurred as a result of the use of the app or reliance on any information provided on the site. Your use of the app and your reliance on any information on the app is solely at your own risk.&lt;br /&gt;
+        &lt;br /&gt;
+        LEGAL DISCLAIMER&lt;br /&gt;
+        &lt;br /&gt;
+        The App cannot and does not contain legal advice. The information is provided for general informational and educational purposes only, and is not a substitute for legal advice.&lt;br /&gt;
+        &lt;br /&gt;
+        Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate legal professionals or licensed attorneys. We do not provide any kind of legal advice. The use or reliance of any information contained on this site is solely at your own risk.&lt;br /&gt;
+    </string>
+
+    <string name="convert_language_results">For each test, there is a conversion table from the test mark per ability (speaking, reading, listening, writing) to the Canadian Level Benchmark (CLB). CLBs are the norm for assessing language ability by IRCC. You can check your conversion through this &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html">here&lt;//a>.</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

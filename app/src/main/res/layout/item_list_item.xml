@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
-                android:fontFamily="@font/circularstdmedium"
+                android:fontFamily="@font/hindsemibold"
                 android:text="Item Name"
                 android:textColor="#143d59"
                 android:textSize="16sp" />
@@ -86,10 +86,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line"
                 android:layout_marginStart="15dp"
+                android:layout_marginEnd="14dp"
                 android:paddingBottom="11dp"
-                android:fontFamily="@font/circularstdbook"
+                android:fontFamily="@font/sourcesansproregular"
                 android:textSize="13sp"
-                android:textColor="#143d59"
+                android:textColor="@color/dark_slate_blue"
                 android:text="Item Description" />
 
         </RelativeLayout>

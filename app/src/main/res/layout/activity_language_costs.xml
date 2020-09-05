@@ -32,9 +32,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-            android:fontFamily="@font/circularstdmedium"
+            android:fontFamily="@font/sourcesansprobold"
             android:text="Language Tests"
-            android:textStyle="bold"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +48,8 @@
             android:paddingStart="17dp"
             android:paddingEnd="17dp"
             android:text="The below table outlines the costs for the 4 different exam types"
-            android:textStyle="bold"
+            android:fontFamily="@font/sourcesansproregular"
+            android:textColor="@color/charcoal_grey"
             android:textSize="12sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -111,7 +113,8 @@
                     android:layout_gravity="center_horizontal"
                     android:gravity="center_vertical"
                     android:text="Exam"
-                    android:textColor="#46494c"
+                    android:textColor="@color/charcoal_grey"
+                    android:fontFamily="@font/sourcesansprosemibold"
                     android:textSize="14sp" />
 
                 <TextView
@@ -128,7 +131,8 @@
                     android:layout_gravity="center_horizontal"
                     android:gravity="center_vertical"
                     android:text="Cost &amp; Time"
-                    android:textColor="#46494c"
+                    android:textColor="@color/charcoal_grey"
+                    android:fontFamily="@font/sourcesansprosemibold"
                     android:textSize="14sp" />
 
                 <TextView
@@ -188,7 +192,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="IELTS - General"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView
@@ -207,7 +212,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="$320 &amp; 14 days"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView
@@ -250,7 +256,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="CELPIP - General"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView
@@ -269,7 +276,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="$265 &amp; 8 days"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView
@@ -311,7 +319,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="TEF Canada"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView
@@ -330,7 +339,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="$300 &amp; 3-4 weeks"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView
@@ -372,7 +382,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="TCF Canada"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView
@@ -391,7 +402,8 @@
                     android:paddingStart="11dp"
                     android:paddingEnd="11dp"
                     android:text="$300 &amp; 15 days"
-                    android:textColor="#46494c"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
                     android:textSize="14sp" />
 
                 <TextView

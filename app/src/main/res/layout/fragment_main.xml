@@ -13,5 +13,4 @@
         app:menu="@menu/bottom_nav_menu"
         app:itemIconTint="#143d59"
         app:itemTextColor="#143d59" />
-    <!--        app:itemIconTint="#f4b41d"/>-->
 </RelativeLayout>
