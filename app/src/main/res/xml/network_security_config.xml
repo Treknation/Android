@@ -4,5 +4,6 @@
         <domain includeSubdomains="true">ielts.org</domain>
         <domain includeSubdomains="true">google.com</domain>
         <domain includeSubdomains="true">canada.ca</domain>
+        <domain includeSubdomains="true">celpiptest.ca</domain>
     </domain-config>
 </network-security-config>

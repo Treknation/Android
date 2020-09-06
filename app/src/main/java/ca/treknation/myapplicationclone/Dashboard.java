@@ -35,13 +35,13 @@ public class Dashboard extends AppCompatActivity {
     private itemRecViewAdapter adapter;
     BottomNavigationView bottomNavigationView;
     Fragment mainFragment;
-    private ConstraintLayout mainLyt, moreLyt;
+    private View includeMain;
+    private View includeMore;
 
     //More
     private TextView txtAboutUs, txtFeedback, txtDisclaimer, txtPrivacyPolicy, txtCicContactInformation;
 
     private static final String TAG1 = "TAG";
-    private BottomNavigationView bottomNavView;
     String[] addresses = new String[]{"support@treknation.ca"};
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -50,16 +50,10 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         initView();
-        initBottomNavView();
 
-
-        //Main
-//        bottomNavigationView = findViewById(R.id.bottomNavView);
-        bottomNavigationView.setItemIconTintList(null);
         itemRecView = findViewById(R.id.itemRecView);
         txtTrekNation = findViewById(R.id.txtTrekNation);
         home_logo = findViewById(R.id.home_logo);
-
 
         itemList = new ArrayList<>();
         adapter = new itemRecViewAdapter(this);
@@ -67,16 +61,6 @@ public class Dashboard extends AppCompatActivity {
         itemRecView.setLayoutManager(new LinearLayoutManager(this));
         itemList = Utils.getInstance().getAllItems();
         adapter.setItems(itemList);
-
-
-//        bottomNavigationView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                switch(bottomNavigationView.getSelectedItemId()) {
-//
-//                }
-//            }
-//        });
 
         //More
         txtAboutUs.setOnClickListener(new View.OnClickListener() {
@@ -121,7 +105,6 @@ public class Dashboard extends AppCompatActivity {
             }
         });
 
-
     }
 
     private void initView() {
@@ -131,31 +114,30 @@ public class Dashboard extends AppCompatActivity {
         txtDisclaimer = findViewById(R.id.txtDisclaimer);
         txtPrivacyPolicy = findViewById(R.id.txtPrivacyPolicy);
         txtCicContactInformation = findViewById(R.id.txtCicContactInformation);
-        mainLyt = findViewById(R.id.main_activity);
-        moreLyt = findViewById(R.id.more_activity);
+
+        includeMain = findViewById(R.id.lyt_main);
+        includeMore = findViewById(R.id.lyt_more);
+       /* mainLyt = includeMain.findViewById(R.id.main_activity);
+        moreLyt = includeMore.findViewById(R.id.more_activity);*/
+
+        initBottomNavView();
     }
 
     private void initBottomNavView() {
-        bottomNavigationView.setSelectedItemId(R.id.home);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.home:
-                        mainLyt.setVisibility(View.VISIBLE);
-                        moreLyt.setVisibility(View.GONE);
+                        includeMain.setVisibility(View.VISIBLE);
+                        includeMore.setVisibility(View.GONE);
                         break;
                     case R.id.other:
-                        mainLyt.setVisibility(View.GONE);
-                        moreLyt.setVisibility(View.VISIBLE);
-//                        Intent intent = new Intent(MainActivity.this, MoreActivity.class);
-//                        startActivity(intent);
-                        break;
-                    default:
+                        includeMain.setVisibility(View.GONE);
+                        includeMore.setVisibility(View.VISIBLE);
                         break;
                 }
-
-                return false;
+                return true;
             }
         });
     }
@@ -171,6 +153,4 @@ public class Dashboard extends AppCompatActivity {
             }
         }
     }
-
-
 }

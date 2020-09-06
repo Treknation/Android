@@ -59,7 +59,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
                 Intent intent = new Intent(mContext, LongDesc.class);
                 intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
                 intent.putExtra("Position", position);
-                ((MainActivity) mContext).startActivityForResult(intent, 1);
+                ((Dashboard) mContext).startActivityForResult(intent, 1);
             }
         });
 
@@ -69,7 +69,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
                 Intent intent = new Intent(mContext, LongDesc.class);
                 intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
                 intent.putExtra("Position", position);
-                ((MainActivity) mContext).startActivityForResult(intent, 1);
+                ((Dashboard) mContext).startActivityForResult(intent, 1);
             }
         });
 
@@ -86,7 +86,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
                     Intent intent = new Intent(mContext, LongDesc.class);
                     intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
                     intent.putExtra("Position", position);
-                    ((MainActivity) mContext).startActivityForResult(intent, 1);
+                    ((Dashboard) mContext).startActivityForResult(intent, 1);
                 }
             });
         }

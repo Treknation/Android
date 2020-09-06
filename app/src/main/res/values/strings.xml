@@ -496,5 +496,7 @@
     <string name="convert_language_results">For each test, there is a conversion table from the test mark per ability (speaking, reading, listening, writing) to the Canadian Level Benchmark (CLB). CLBs are the norm for assessing language ability by IRCC. You can check your conversion through this &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/check-processing-times.html">here&lt;//a>.</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home">Home</string>
+    <string name="more">More</string>
 </resources>
 
