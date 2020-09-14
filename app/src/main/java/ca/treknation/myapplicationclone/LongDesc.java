@@ -3,6 +3,8 @@ package ca.treknation.myapplicationclone;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.constraintlayout.widget.ConstraintSet;
 
 import android.app.Activity;
 import android.content.Context;
@@ -27,12 +29,15 @@ public class LongDesc extends AppCompatActivity {
 
     public static final String ITEM_ID_KEY = "itemID";
     private static final String TAG = "TAG";
+    private static final String TAG2 = "LongDesc started";
 
     private TextView txtItemName, txtLongDesc;
     private Button btnMarkComplete, btnCosts, btnSubmitEE, btnTestResult, btnTestCost, btnCEC, btnFSW, btnFST, btnInCanada, btnOutsideCanada;
     private ImageView btnCostsArrow, btnSubmitEEArrow, btnTestResultArrow, btnTestCostArrow, btnCECArrow, btnFSWArrow, btnFSTArrow, btnInCanadaArrow, btnOutsideCanadaArrow;
     private ImageView btnBackArrow;
     private Context lContext;
+    ConstraintLayout constraintLayout;
+    ConstraintSet constraintSet;
 
 
     @RequiresApi(api = Build.VERSION_CODES.N)
@@ -50,12 +55,6 @@ public class LongDesc extends AppCompatActivity {
             }
         });
 
-        btnCosts.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(LongDesc.this, "This is test", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         Intent intent = getIntent();
         if (null != intent) {
@@ -69,10 +68,16 @@ public class LongDesc extends AppCompatActivity {
                     resultIntent.putExtra("Item ID", itemID);
                     resultIntent.putExtra("Position", position);
                     setResult(RESULT_OK, resultIntent);
-                    Log.d(TAG, "onClick: started");
+                    Log.d(TAG, "onClick: Long Desc activity btnMarkComplete started");
                     finish();
                 }
             });
+
+            constraintSet = new ConstraintSet();
+            constraintSet.clone(constraintLayout);
+            constraintSet.connect(btnMarkComplete.getId(), ConstraintSet.TOP, txtLongDesc.getId(), ConstraintSet.BOTTOM, 25);
+            constraintSet.applyTo(constraintLayout);
+
             if (itemID != -1) {
                 Item incomingItem = Utils.getInstance().getItemById(itemID);
                 if (null != incomingItem) {
@@ -88,6 +93,11 @@ public class LongDesc extends AppCompatActivity {
                     btnSubmitEE.setVisibility(View.VISIBLE);
                     btnCostsArrow.setVisibility(View.VISIBLE);
                     btnSubmitEEArrow.setVisibility(View.VISIBLE);
+
+                    constraintSet = new ConstraintSet();
+                    constraintSet.clone(constraintLayout);
+                    constraintSet.connect(btnMarkComplete.getId(), ConstraintSet.TOP, btnSubmitEE.getId(), ConstraintSet.BOTTOM, 25);
+                    constraintSet.applyTo(constraintLayout);
 
                     btnCosts.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -115,6 +125,11 @@ public class LongDesc extends AppCompatActivity {
                     btnTestCost.setVisibility(View.VISIBLE);
                     btnTestResultArrow.setVisibility(View.VISIBLE);
                     btnTestCostArrow.setVisibility(View.VISIBLE);
+
+                    constraintSet = new ConstraintSet();
+                    constraintSet.clone(constraintLayout);
+                    constraintSet.connect(btnMarkComplete.getId(), ConstraintSet.TOP, btnTestCost.getId(), ConstraintSet.BOTTOM, 25);
+                    constraintSet.applyTo(constraintLayout);
 
                     btnTestResult.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -147,6 +162,12 @@ public class LongDesc extends AppCompatActivity {
                     btnCECArrow.setVisibility(View.VISIBLE);
                     btnFSTArrow.setVisibility(View.VISIBLE);
                     btnFSWArrow.setVisibility(View.VISIBLE);
+
+                    constraintSet = new ConstraintSet();
+                    constraintSet.clone(constraintLayout);
+                    constraintSet.connect(btnMarkComplete.getId(), ConstraintSet.TOP, btnFST.getId(), ConstraintSet.BOTTOM, 25);
+
+                    constraintSet.applyTo(constraintLayout);
 
                     btnCEC.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -184,6 +205,12 @@ public class LongDesc extends AppCompatActivity {
                     btnOutsideCanada.setVisibility(View.VISIBLE);
                     btnInCanadaArrow.setVisibility(View.VISIBLE);
                     btnOutsideCanadaArrow.setVisibility(View.VISIBLE);
+
+                    constraintSet = new ConstraintSet();
+                    constraintSet.clone(constraintLayout);
+                    constraintSet.connect(btnMarkComplete.getId(), ConstraintSet.TOP, btnOutsideCanada.getId(), ConstraintSet.BOTTOM, 25);
+                    constraintSet.applyTo(constraintLayout);
+
 
                     btnInCanada.setOnClickListener(new View.OnClickListener() {
                         @Override
@@ -271,5 +298,7 @@ public class LongDesc extends AppCompatActivity {
         btnFSTArrow = findViewById(R.id.btnFSTArrow);
         btnInCanadaArrow = findViewById(R.id.btnInCanadaArrow);
         btnOutsideCanadaArrow = findViewById(R.id.btnOutsideCanadaArrow);
+
+        constraintLayout = findViewById(R.id.constraintLayout);
     }
 }

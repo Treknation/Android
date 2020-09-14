@@ -13,12 +13,12 @@
     tools:context=".LongDesc"
     tools:targetApi="p">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/btnBackArrow3"
+            android:id="@+id/btnBackArrow8"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -29,48 +29,75 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="100sp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/sourcesansprobold"
-            android:text="Language Tests"
             android:textColor="@color/dark_slate_blue"
-            android:textSize="16sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:text="Lanugage Tests"
+            android:textSize="16sp" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="55dp"
-            android:fontFamily="@font/sourcesansprobold"
-            android:text="How to Convert your test results"
-            android:textSize="12sp"
-            android:textColor="@color/charcoal_grey"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <ScrollView
+            android:id="@+id/scrollerID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/textView"
+            android:fillViewport="true"
+            android:layout_marginTop="20dp"
+            android:scrollbars="vertical">
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="17dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="17dp"
-            android:paddingStart="17dp"
-            android:autoLink="web"
-            android:text="txt"
-            android:paddingEnd="17dp"
-            android:textSize="12sp"
-            android:textColor="@color/charcoal_grey"
-            android:clickable="true"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:focusable="true" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="17dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/sourcesansprobold"
+                    android:text="How to convert your test results?"
+                    android:textColor="@color/charcoal_grey"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/txtConvertDesc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="17dp"
+                    android:paddingEnd="17dp"
+                    android:layout_marginStart="17dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="17dp"
+                    android:text="@string/convert_language_results"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:textColor="@color/charcoal_grey"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="100sp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeMaxTextSize="100sp"
+                    android:textColorLink="#077cc5"
+                    android:paddingBottom="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>

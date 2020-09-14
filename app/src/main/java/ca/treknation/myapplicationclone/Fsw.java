@@ -26,7 +26,7 @@ public class Fsw extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fsw);
-        intiViews();
+        initViews();
         txtFswDesc.setMovementMethod(LinkMovementMethod.getInstance());
         btnBackArrow8.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,7 +68,7 @@ public class Fsw extends AppCompatActivity {
         text.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
-    private void intiViews() {
+    private void initViews() {
 
         btnBackArrow8 = findViewById(R.id.btnBackArrow8);
         txtFswDesc = findViewById(R.id.txtFswDesc);

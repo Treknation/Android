@@ -30,6 +30,7 @@ import java.util.ConcurrentModificationException;
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "TAG";
+    private static final String TAG1 = "MainActivity started";
     private static RecyclerView itemRecView;
     private TextView txtTrekNation;
     private ImageView home_logo;
@@ -104,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
+                Log.d(TAG, "onActivityResult: Main Activity Started");
                 int result = data.getIntExtra("Item ID", 0);
                 int position = data.getIntExtra("Position", 0);
                 itemList.get(position).isViewed = true;

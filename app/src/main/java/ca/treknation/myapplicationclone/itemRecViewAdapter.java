@@ -26,7 +26,9 @@ import static ca.treknation.myapplicationclone.LongDesc.ITEM_ID_KEY;
 
 public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.ViewHolder> {
 
+    private static final String TAG4 = "";
     private Context mContext;
+    private static final String TAG = "itemRecViewAdapter started";
 
     public itemRecViewAdapter(Context mContext) {
 
@@ -63,7 +65,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
             }
         });
 
-        holder.txtItem.setOnClickListener(new View.OnClickListener() {
+        holder.collapsedRelLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, LongDesc.class);
@@ -75,6 +77,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
 
 
         if (items.get(position).isViewed) {
+            Log.d(TAG4, "onBindViewHolder: started");
             holder.collapsedRelLayout.setBackgroundColor(mContext.getResources().getColor(R.color.dark_slate_blue));
             holder.expandedRelLayout.setVisibility(View.INVISIBLE);
             items.get(position).setExpanded(false);

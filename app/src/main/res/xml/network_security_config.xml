@@ -5,5 +5,7 @@
         <domain includeSubdomains="true">google.com</domain>
         <domain includeSubdomains="true">canada.ca</domain>
         <domain includeSubdomains="true">celpiptest.ca</domain>
+        <domain includeSubdomains="true">treknation.ca</domain>
+        <domain includeSubdomains="true">cbsa-asfc.gc.ca</domain>
     </domain-config>
 </network-security-config>

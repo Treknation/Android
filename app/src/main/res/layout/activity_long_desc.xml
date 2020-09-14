@@ -8,6 +8,7 @@
     android:layout_marginTop="15dp"
     android:layout_marginRight="15dp"
     android:layout_marginBottom="15dp"
+    android:paddingBottom="25dp"
     android:outlineAmbientShadowColor="#336c6c6c"
     app:cardCornerRadius="7dp"
     tools:context=".LongDesc"
@@ -38,7 +39,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="8dp"
+            android:padding="10dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_back_arrow" />
@@ -54,13 +56,20 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:id="@+id/constraintLayout">
 
 
                 <TextView
                     android:id="@+id/txtLongDesc"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeMaxTextSize="100sp"
+                    app:autoSizeTextType="uniform"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeMaxTextSize="100sp"
                     android:clickable="true"
                     android:focusable="true"
                     android:fontFamily="@font/sourcesansproregular"
@@ -68,29 +77,29 @@
                     android:paddingStart="17dp"
                     android:textColor="@color/charcoal_grey"
                     android:paddingEnd="17dp"
-                    android:paddingBottom="63dp"
                     android:scrollbars="vertical"
                     android:text="Long Description"
-                    android:textSize="16sp"
+                    android:textColorLink="#077cc5"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/btnCosts"
-                    android:layout_width="260dp"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
                     android:layout_above="@+id/btnMarkComplete"
                     android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="#ffffff"
                     android:fontFamily="@font/hindsemibold"
                     android:gravity="left|center_vertical"
                     android:text="Costs and Processing Time"
                     android:textAllCaps="false"
-                    android:textColor="#143d59"
+                    android:textColor="@color/dark_slate_blue"
                     android:textSize="14sp"
-                    app:layout_constraintBottom_toTopOf="@+id/btnSubmitEE"
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -101,7 +110,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="26dp"
-                    android:layout_marginBottom="15dp"
                     android:layout_toEndOf="@id/btnCosts"
                     android:elevation="2dp"
                     android:src="@drawable/open"
@@ -112,8 +120,10 @@
 
                 <Button
                     android:id="@+id/btnSubmitEE"
-                    android:layout_width="260dp"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginBottom="20dp"
                     android:backgroundTint="#ffffff"
                     android:fontFamily="@font/hindsemibold"
@@ -122,6 +132,7 @@
                     android:textAllCaps="false"
                     android:textColor="#143d59"
                     app:layout_constraintBottom_toTopOf="@+id/btnMarkComplete"
+                    app:layout_constraintTop_toBottomOf="@+id/btnCosts"
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -131,7 +142,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="26dp"
-                    android:layout_marginBottom="15dp"
                     android:layout_toEndOf="@id/btnSubmitEE"
                     android:elevation="2dp"
                     android:src="@drawable/open"
@@ -142,8 +152,10 @@
 
                 <Button
                     android:id="@+id/btnTestResult"
-                    android:layout_width="260dp"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_above="@+id/btnMarkComplete"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="10dp"
@@ -155,7 +167,6 @@
                     android:textColor="#143d59"
                     android:textSize="14sp"
                     android:textStyle="normal"
-                    app:layout_constraintBottom_toTopOf="@+id/btnTestCost"
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -166,7 +177,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="26dp"
-                    android:layout_marginBottom="15dp"
                     android:layout_toEndOf="@id/btnTestResult"
                     android:elevation="2dp"
                     android:src="@drawable/open"
@@ -176,8 +186,10 @@
 
                 <Button
                     android:id="@+id/btnTestCost"
-                    android:layout_width="260dp"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginBottom="20dp"
                     android:backgroundTint="#ffffff"
                     android:fontFamily="@font/hindsemibold"
@@ -185,7 +197,7 @@
                     android:text="Costs"
                     android:textAllCaps="false"
                     android:textColor="#143d59"
-                    app:layout_constraintBottom_toTopOf="@+id/btnMarkComplete"
+                    app:layout_constraintTop_toBottomOf="@id/btnTestResult"
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -195,7 +207,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="26dp"
-                    android:layout_marginBottom="15dp"
                     android:layout_toEndOf="@id/btnTestCost"
                     android:elevation="2dp"
                     android:src="@drawable/open"
@@ -206,8 +217,10 @@
 
                 <Button
                     android:id="@+id/btnCEC"
-                    android:layout_width="260dp"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_above="@+id/btnMarkComplete"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="10dp"
@@ -218,11 +231,10 @@
                     android:textColor="#143d59"
                     android:textSize="14sp"
                     android:textStyle="normal"
-                    app:layout_constraintBottom_toTopOf="@+id/btnFSW"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLongDesc"
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtLongDesc" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageView
                     android:id="@+id/btnCECArrow"
@@ -238,8 +250,10 @@
 
                 <Button
                     android:id="@+id/btnFSW"
-                    android:layout_width="260dp"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_above="@+id/btnMarkComplete"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="10dp"
@@ -250,11 +264,10 @@
                     android:textColor="#143d59"
                     android:textSize="14sp"
                     android:textStyle="normal"
-                    app:layout_constraintBottom_toTopOf="@+id/btnFST"
+                    app:layout_constraintTop_toBottomOf="@+id/btnCEC"
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btnCEC" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageView
                     android:id="@+id/btnFSWArrow"
@@ -271,15 +284,17 @@
 
                 <Button
                     android:id="@+id/btnFST"
-                    android:layout_width="260dp"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginBottom="20dp"
                     android:backgroundTint="#ffffff"
                     android:gravity="left|center_vertical"
                     android:text="FST"
                     android:textAllCaps="false"
                     android:textColor="#143d59"
-                    app:layout_constraintBottom_toTopOf="@+id/btnMarkComplete"
+                    app:layout_constraintTop_toBottomOf="@+id/btnFSW"
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -298,9 +313,11 @@
 
                 <Button
                     android:id="@+id/btnInCanada"
-                    android:layout_width="260dp"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
-                    android:layout_above="@+id/btnMarkComplete"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="10dp"
                     android:backgroundTint="#ffffff"
@@ -308,14 +325,12 @@
                     android:gravity="left|center_vertical"
                     android:text="If you are already in Canada"
                     android:textAllCaps="false"
-                    android:textColor="#143d59"
+                    android:textColor="@color/dark_slate_blue"
                     android:textSize="14sp"
-                    android:textStyle="normal"
-                    app:layout_constraintBottom_toTopOf="@+id/btnOutsideCanada"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLongDesc"
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtLongDesc" />
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <ImageView
                     android:id="@+id/btnInCanadaArrow"
@@ -331,8 +346,10 @@
 
                 <Button
                     android:id="@+id/btnOutsideCanada"
-                    android:layout_width="260dp"
+                    android:layout_width="match_parent"
                     android:layout_height="49dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
                     android:layout_marginBottom="20dp"
                     android:backgroundTint="#ffffff"
                     android:fontFamily="@font/hindsemibold"
@@ -341,6 +358,7 @@
                     android:textAllCaps="false"
                     android:textColor="#143d59"
                     app:layout_constraintBottom_toTopOf="@+id/btnMarkComplete"
+                    app:layout_constraintTop_toBottomOf="@+id/btnInCanada"
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
@@ -359,8 +377,10 @@
 
                 <Button
                     android:id="@+id/btnMarkComplete"
-                    android:layout_width="234dp"
+                    android:layout_width="match_parent"
                     android:layout_height="33dp"
+                    android:layout_marginStart="28dp"
+                    android:layout_marginEnd="28dp"
                     android:layout_alignParentBottom="true"
                     android:layout_centerHorizontal="true"
                     android:layout_marginBottom="20dp"
@@ -371,10 +391,20 @@
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="25dp"
                     app:layout_constraintCircleRadius="16dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnMarkComplete" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

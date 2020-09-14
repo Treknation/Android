@@ -38,7 +38,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
-                android:layout_marginEnd="16dp"
+                android:padding="10dp"
+                android:layout_marginEnd="8dp"
                 android:src="@drawable/ic_down_arrow" />
 
             <ImageView
@@ -55,11 +56,12 @@
 
         <ImageView
             android:id="@+id/btnUpArrow"
-            android:layout_width="18dp"
-            android:layout_height="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="17dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="8dp"
+            android:padding="10dp"
             app:srcCompat="@drawable/ic_up_arrow" />
 
         <RelativeLayout
@@ -74,7 +76,7 @@
                 android:id="@+id/line"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
@@ -82,14 +84,19 @@
 
             <TextView
                 android:id="@+id/txtShortDesc"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="100sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="14dp"
                 android:paddingBottom="11dp"
                 android:fontFamily="@font/sourcesansproregular"
-                android:textSize="13sp"
                 android:textColor="@color/dark_slate_blue"
                 android:text="Item Description" />
 

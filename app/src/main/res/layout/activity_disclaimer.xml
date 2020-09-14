@@ -29,32 +29,45 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="100sp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
             android:layout_marginTop="15dp"
             android:fontFamily="@font/sourcesansprobold"
             android:text="Disclaimer"
             android:textSize="16sp"
-            android:textStyle="bold"
+            android:textColor="@color/dark_slate_blue"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
+            android:id="@+id/txtDisclaimer"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="17dp"
             android:layout_marginTop="20dp"
             android:layout_marginEnd="17dp"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="12sp"
+            android:autoSizeMaxTextSize="100sp"
+            app:autoSizeTextType="uniform"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeMaxTextSize="100sp"
+            android:textColorLink="#077cc5"
             android:fontFamily="@font/sourcesansproregular"
-            android:paddingStart="17dp"
-            android:paddingEnd="17dp"
             android:text="@string/disclaimer_long_desc"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:paddingBottom="10dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

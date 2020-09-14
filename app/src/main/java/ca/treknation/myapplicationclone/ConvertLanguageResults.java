@@ -1,16 +1,13 @@
 package ca.treknation.myapplicationclone;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.method.LinkMovementMethod;
-import android.text.style.ClickableSpan;
 import android.text.SpannableStringBuilder;
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -21,10 +18,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class ConvertLanguageResults extends AppCompatActivity {
-
-    private ImageView btnBackArrow3;
-    private TextView textView3;
-
+    private ImageView btnBackArrow8;
+    private TextView txtConvertDesc;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -32,38 +27,50 @@ public class ConvertLanguageResults extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_convert_lanugage_results);
         initViews();
-        textView3.setMovementMethod(LinkMovementMethod.getInstance());
-
-//        String text = App.getContext().getString(R.string.convert_language_results);
-//        Spanned styled_overview_long_description = Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY);
-//
-//        textView3.setText(styled_overview_long_description);
-//                "For each test, there is a conversion table from the test mark per ability (speaking, reading, listening, writing) to the Canadian Level Benchmark (CLB). CLBs are the norm for assessing language ability by IRCC. You can check your conversion through this link.";
-//
-//        SpannableString ss = new SpannableString((text));
-//
-//        ClickableSpan clickableSpan1 = new ClickableSpan() {
-//            @Override
-//            public void onClick(@NonNull View widget) {
-//
-//            }
-//        };
-//
-//        ss.setSpan(clickableSpan1, 256, 259, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
-//
-//        textView3.setText(ss);
-//        textView3.setMovementMethod(LinkMovementMethod.getInstance());
-
-        btnBackArrow3.setOnClickListener(new View.OnClickListener() {
+        txtConvertDesc.setMovementMethod(LinkMovementMethod.getInstance());
+        btnBackArrow8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ConvertLanguageResults.this.finish();
             }
         });
+
+        String convert_language_results_desc = App.getContext().getString(R.string.convert_language_results);
+        Spanned styled_convert_language_results_desc = Html.fromHtml(convert_language_results_desc, Html.FROM_HTML_MODE_LEGACY);
+        setTextViewHTML(txtConvertDesc, styled_convert_language_results_desc);
+
+    }
+
+    protected void makeLinkClickable(SpannableStringBuilder strBuilder, final URLSpan span) {
+        int start = strBuilder.getSpanStart(span);
+        int end = strBuilder.getSpanEnd(span);
+        int flags = strBuilder.getSpanFlags(span);
+        ClickableSpan clickable = new ClickableSpan() {
+            public void onClick(View view) {
+                //span.getURL(); -> to get the clicked URL
+//                Toast.makeText(getApplicationContext(), "Link Clicked "+ span.getURL(), Toast.LENGTH_SHORT).show();
+                Intent intent5 = new Intent(getApplicationContext(), WebsiteActivity.class);
+                intent5.putExtra("Url 1", span.getURL());
+                startActivity(intent5);
+            }
+        };
+        strBuilder.setSpan(clickable, start, end, flags);
+        strBuilder.removeSpan(span);
+    }
+
+    protected void setTextViewHTML(TextView text, Spanned html) {
+        SpannableStringBuilder strBuilder = new SpannableStringBuilder(html);
+        URLSpan[] urls = strBuilder.getSpans(0, html.length(), URLSpan.class);
+        for (URLSpan span : urls) {
+            makeLinkClickable(strBuilder, span);
+        }
+        text.setText(strBuilder);
+        text.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     private void initViews() {
-        btnBackArrow3 = findViewById(R.id.btnBackArrow3);
-        textView3 = findViewById(R.id.textView3);
+
+        btnBackArrow8 = findViewById(R.id.btnBackArrow8);
+        txtConvertDesc = findViewById(R.id.txtConvertDesc);
     }
 }

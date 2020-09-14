@@ -20,6 +20,7 @@ public class MoreActivity extends AppCompatActivity {
 
     private static final String TAG = "TAG";
     private BottomNavigationView bottomNavView;
+    String subject = "User Feedback";
     String[] addresses = new String[]{"support@treknation.ca"};
 
     @Override
@@ -41,8 +42,9 @@ public class MoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "support@treknation.ca", null));
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "User Feedback");
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
+//                emailIntent.setType("message/rfc822");
+//                emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
                 startActivity(Intent.createChooser(emailIntent, "Send email..."));
             }
         });

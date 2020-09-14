@@ -71,6 +71,8 @@
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="25dp"
                     android:layout_marginEnd="17dp"
+                    android:paddingBottom="10dp"
+                    android:textColorLink="#077cc5"
                     android:text="@string/fsw_desc"
                     android:fontFamily="@font/sourcesansproregular"
                     android:textColor="@color/charcoal_grey"

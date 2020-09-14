@@ -18,7 +18,7 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/btnBackArrow6"
+            android:id="@+id/btnBackArrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -57,20 +57,22 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="17dp"
                     android:fontFamily="@font/sourcesansprobold"
-                    android:text="If you are already in Canada"
+                    android:text="If you are outside Canada"
                     android:textColor="@color/charcoal_grey"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/txtOutsideCanada"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:paddingStart="17dp"
                     android:paddingEnd="17dp"
+                    android:paddingBottom="10dp"
                     android:layout_marginStart="17dp"
                     android:layout_marginTop="25dp"
                     android:layout_marginEnd="17dp"
+                    android:textColorLink="#077cc5"
                     android:text="@string/outside_canada"
                     android:fontFamily="@font/sourcesansproregular"
                     android:textColor="@color/charcoal_grey"

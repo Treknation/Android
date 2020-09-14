@@ -13,6 +13,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
@@ -146,6 +147,7 @@ public class Dashboard extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
+                Log.d(TAG, "onActivityResult: Dashboard activity started");
                 int result = data.getIntExtra("Item ID", 0);
                 int position = data.getIntExtra("Position", 0);
                 itemList.get(position).isViewed = true;
