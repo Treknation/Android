@@ -33,7 +33,7 @@ public class Dashboard extends AppCompatActivity {
     private Context pContext;
     private static final int MY_REQUEST = 1001;
     private ArrayList<Item> itemList;
-    private itemRecViewAdapter adapter;
+    private RecycleViewItemListAdapter adapter;
     BottomNavigationView bottomNavigationView;
     Fragment mainFragment;
     private View includeMain;
@@ -57,14 +57,27 @@ public class Dashboard extends AppCompatActivity {
         home_logo = findViewById(R.id.home_logo);
 
         itemList = new ArrayList<>();
-        adapter = new itemRecViewAdapter(this);
+
+        //Todo dummy code of adapter
+        itemList = Utils.getInstance().getAllItems();
+
+        adapter = new RecycleViewItemListAdapter(this,itemList);
+        itemRecView.setAdapter(adapter);
+        itemRecView.setLayoutManager(new LinearLayoutManager(this));
+
+        //for loop {count according to array.length}
+        // if pos = itemList(pos){
+        // isViewed = true
+
+        //Todo original code of adapter
+        /*adapter = new itemRecViewAdapter(this);
         itemRecView.setAdapter(adapter);
         itemRecView.setLayoutManager(new LinearLayoutManager(this));
         itemList = Utils.getInstance().getAllItems();
         //for loop {count according to array.length}
         // if pos = itemList(pos){
         // isViewed = true
-        adapter.setItems(itemList);
+        adapter.setItems(itemList);*/
 
         //More
         txtAboutUs.setOnClickListener(new View.OnClickListener() {
@@ -154,7 +167,7 @@ public class Dashboard extends AppCompatActivity {
                 int result = data.getIntExtra("Item ID", 0);
                 int position = data.getIntExtra("Position", 0);
                 itemList.get(position).isViewed = true;
-                adapter.setItems(itemList);
+                adapter.notifyDataSetChanged();
             }
         }
     }
