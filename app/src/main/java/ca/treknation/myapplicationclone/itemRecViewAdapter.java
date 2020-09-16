@@ -75,7 +75,6 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
                     holder.expandedRelLayout.setVisibility(View.GONE);
                     holder.downArrow.setVisibility(View.VISIBLE);
                     holder.upArrow.setVisibility(View.GONE);
-
                 }
             }
         });
@@ -95,15 +94,12 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
         holder.collapsedRelLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!items.get(position).isViewed) {
-                    Intent intent = new Intent(mContext, LongDesc.class);
-                    intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
-                    intent.putExtra("Position", position);
-                    ((Dashboard) mContext).startActivityForResult(intent, 1);
-                }
+                Intent intent = new Intent(mContext, LongDesc.class);
+                intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
+                intent.putExtra("Position", position);
+                ((Dashboard) mContext).startActivityForResult(intent, 1);
             }
         });
-
 
         if (items.get(position).isViewed) {
             Log.d(TAG4, "onBindViewHolder: started");

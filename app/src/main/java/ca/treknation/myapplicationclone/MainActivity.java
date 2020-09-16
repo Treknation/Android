@@ -53,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
         txtTrekNation = findViewById(R.id.txtTrekNation);
         home_logo = findViewById(R.id.home_logo);
 
+        //list of integers within shared preferences
+        // create shared preferences, give name
+        // sharedpreference.put 1 key = list of integers
+        //use get.sharedpreferences in onCreate; check if there is a key first, if key present, pick array from key
+        // for loop in dashboard
 
         itemList = new ArrayList<>();
         adapter = new itemRecViewAdapter(this);
