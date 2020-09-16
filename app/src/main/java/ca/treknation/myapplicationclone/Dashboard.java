@@ -57,6 +57,7 @@ public class Dashboard extends AppCompatActivity {
         home_logo = findViewById(R.id.home_logo);
 
         itemList = new ArrayList<>();
+        itemRecView.hasFixedSize();
         adapter = new itemRecViewAdapter(this);
         itemRecView.setAdapter(adapter);
         itemRecView.setLayoutManager(new LinearLayoutManager(this));

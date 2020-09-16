@@ -55,23 +55,56 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
         holder.txtShortDesc.setText(items.get(position).getItemShortDesc());
 //        holder.txtLongDesc.setText(items.get(position).getItemLongDesc());
 
+        holder.downArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Item item = items.get(position);
+                item.setExpanded(!item.isExpanded());
+                if(!items.get(position).isViewed) {
+                    TransitionManager.beginDelayedTransition(holder.parent);
+                    holder.expandedRelLayout.setVisibility(View.VISIBLE);
+                    holder.downArrow.setVisibility(View.GONE);
+                    holder.upArrow.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
+        holder.upArrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Item item = items.get(position);
+                item.setExpanded(!item.isExpanded());
+                if(!items.get(position).isViewed) {
+                    TransitionManager.beginDelayedTransition(holder.parent);
+                    holder.expandedRelLayout.setVisibility(View.GONE);
+                    holder.downArrow.setVisibility(View.VISIBLE);
+                    holder.upArrow.setVisibility(View.GONE);
+
+                }
+            }
+        });
+
         holder.txtShortDesc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, LongDesc.class);
-                intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
-                intent.putExtra("Position", position);
-                ((Dashboard) mContext).startActivityForResult(intent, 1);
+                if(!items.get(position).isViewed){
+                    Intent intent = new Intent(mContext, LongDesc.class);
+                    intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
+                    intent.putExtra("Position", position);
+                    ((Dashboard) mContext).startActivityForResult(intent, 1);
+                }
             }
         });
 
         holder.collapsedRelLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(mContext, LongDesc.class);
-                intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
-                intent.putExtra("Position", position);
-                ((Dashboard) mContext).startActivityForResult(intent, 1);
+                if(!items.get(position).isViewed) {
+                    Intent intent = new Intent(mContext, LongDesc.class);
+                    intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
+                    intent.putExtra("Position", position);
+                    ((Dashboard) mContext).startActivityForResult(intent, 1);
+                }
             }
         });
 
@@ -79,35 +112,22 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
         if (items.get(position).isViewed) {
             Log.d(TAG4, "onBindViewHolder: started");
             holder.collapsedRelLayout.setBackgroundColor(mContext.getResources().getColor(R.color.dark_slate_blue));
-            holder.expandedRelLayout.setVisibility(View.INVISIBLE);
+            holder.expandedRelLayout.setVisibility(View.GONE);
             items.get(position).setExpanded(false);
             holder.txtItem.setTextColor(mContext.getResources().getColor(R.color.white));
             holder.btnComplete.setVisibility(View.VISIBLE);
             holder.txtItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(mContext, LongDesc.class);
-                    intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
-                    intent.putExtra("Position", position);
-                    ((Dashboard) mContext).startActivityForResult(intent, 1);
+                    if(!items.get(position).isViewed) {
+                        Intent intent = new Intent(mContext, LongDesc.class);
+                        intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
+                        intent.putExtra("Position", position);
+                        ((Dashboard) mContext).startActivityForResult(intent, 1);
+                    }
                 }
             });
         }
-
-
-        if (items.get(position).isExpanded()) {
-            TransitionManager.beginDelayedTransition(holder.parent);
-            holder.expandedRelLayout.setVisibility(View.VISIBLE);
-            holder.downArrow.setVisibility(View.GONE);
-            holder.upArrow.setVisibility(View.VISIBLE);
-        } else {
-            TransitionManager.beginDelayedTransition(holder.parent);
-            holder.expandedRelLayout.setVisibility(View.GONE);
-            holder.downArrow.setVisibility(View.VISIBLE);
-            holder.upArrow.setVisibility(View.GONE);
-        }
-
-
     }
 
     @Override
@@ -138,24 +158,6 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
             collapsedRelLayout = itemView.findViewById(R.id.collapsedRelLayout);
             parent1 = itemView.findViewById(R.id.parent1);
             parent = itemView.findViewById(R.id.parent);
-
-            downArrow.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Item item = items.get(getAdapterPosition());
-                    item.setExpanded(!item.isExpanded());
-                    notifyItemChanged(getAdapterPosition());
-                }
-            });
-
-            upArrow.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Item item = items.get(getAdapterPosition());
-                    item.setExpanded(!item.isExpanded());
-                    notifyItemChanged(getAdapterPosition());
-                }
-            });
         }
     }
 
