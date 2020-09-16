@@ -62,6 +62,9 @@ public class Dashboard extends AppCompatActivity {
         itemRecView.setAdapter(adapter);
         itemRecView.setLayoutManager(new LinearLayoutManager(this));
         itemList = Utils.getInstance().getAllItems();
+        //for loop {count according to array.length}
+        // if pos = itemList(pos){
+        // isViewed = true
         adapter.setItems(itemList);
 
         //More
