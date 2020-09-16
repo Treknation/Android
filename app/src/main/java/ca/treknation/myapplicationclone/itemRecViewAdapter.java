@@ -1,6 +1,5 @@
 package ca.treknation.myapplicationclone;
 
-import android.app.Instrumentation;
 import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
@@ -10,17 +9,14 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.TransitionRes;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.transition.TransitionManager;
 
 import java.util.ArrayList;
 
-import static android.content.ContentValues.TAG;
 import static ca.treknation.myapplicationclone.LongDesc.ITEM_ID_KEY;
 
 
@@ -60,7 +56,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
             public void onClick(View v) {
                 Item item = items.get(position);
                 item.setExpanded(!item.isExpanded());
-                if(!items.get(position).isViewed) {
+                if (!items.get(position).isViewed) {
                     TransitionManager.beginDelayedTransition(holder.parent);
                     holder.expandedRelLayout.setVisibility(View.VISIBLE);
                     holder.downArrow.setVisibility(View.GONE);
@@ -74,7 +70,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
             public void onClick(View v) {
                 Item item = items.get(position);
                 item.setExpanded(!item.isExpanded());
-                if(!items.get(position).isViewed) {
+                if (!items.get(position).isViewed) {
                     TransitionManager.beginDelayedTransition(holder.parent);
                     holder.expandedRelLayout.setVisibility(View.GONE);
                     holder.downArrow.setVisibility(View.VISIBLE);
@@ -87,7 +83,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
         holder.txtShortDesc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!items.get(position).isViewed){
+                if (!items.get(position).isViewed) {
                     Intent intent = new Intent(mContext, LongDesc.class);
                     intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
                     intent.putExtra("Position", position);
@@ -99,7 +95,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
         holder.collapsedRelLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!items.get(position).isViewed) {
+                if (!items.get(position).isViewed) {
                     Intent intent = new Intent(mContext, LongDesc.class);
                     intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
                     intent.putExtra("Position", position);
@@ -119,7 +115,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
             holder.txtItem.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(!items.get(position).isViewed) {
+                    if (!items.get(position).isViewed) {
                         Intent intent = new Intent(mContext, LongDesc.class);
                         intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
                         intent.putExtra("Position", position);
@@ -127,6 +123,17 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
                     }
                 }
             });
+        } else {
+            holder.collapsedRelLayout.setBackgroundColor(mContext.getResources().getColor(R.color.white));
+            holder.expandedRelLayout.setVisibility(View.GONE);
+            if(items.get(position).isExpanded()){
+                holder.downArrow.setVisibility(View.GONE);
+                holder.upArrow.setVisibility(View.VISIBLE);
+            } else {
+                holder.downArrow.setVisibility(View.VISIBLE);
+                holder.upArrow.setVisibility(View.GONE);
+            }
+            holder.txtItem.setTextColor(mContext.getResources().getColor(R.color.dark_slate_blue));
         }
     }
 
