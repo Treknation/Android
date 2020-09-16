@@ -121,15 +121,17 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
             });
         } else {
             holder.collapsedRelLayout.setBackgroundColor(mContext.getResources().getColor(R.color.white));
+            holder.txtItem.setTextColor(mContext.getResources().getColor(R.color.dark_slate_blue));
+
             holder.expandedRelLayout.setVisibility(View.GONE);
-            if(items.get(position).isExpanded()){
+            if (items.get(position).isExpanded()) {
                 holder.downArrow.setVisibility(View.GONE);
                 holder.upArrow.setVisibility(View.VISIBLE);
             } else {
                 holder.downArrow.setVisibility(View.VISIBLE);
                 holder.upArrow.setVisibility(View.GONE);
             }
-            holder.txtItem.setTextColor(mContext.getResources().getColor(R.color.dark_slate_blue));
+//            holder.txtItem.setTextColor(mContext.getResources().getColor(R.color.dark_slate_blue));
         }
     }
 
