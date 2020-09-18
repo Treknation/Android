@@ -74,24 +74,38 @@ public class Dashboard extends AppCompatActivity {
 //        String savedString = sharedPreferences.getString("string", "");
 //        StringTokenizer st = new StringTokenizer(savedString, ",");
 
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
-        Gson gson = new Gson();
-        String json = sharedPreferences.getString("task list", null);
-        Type type = new TypeToken<ArrayList<Integer>>() {
-        }.getType();
-        savedList = gson.fromJson(json, type);
+//        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+//        Gson gson = new Gson();
+//        String json = sharedPreferences.getString("task list", null);
+//        Type type = new TypeToken<ArrayList<Integer>>() {
+//        }.getType();
+//        savedList = gson.fromJson(json, type);
+        SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+//        String savedString = prefs.getString("string", "");
+        int idName = prefs.getInt("idName", 0);
 
-        if (savedList == null) {
-            savedList = new int[0];
+        if (idName != 0) {
+            for (int i = 0; i < savedList.length; i++) {
+                itemList.get(savedList[i]).isViewed = true;
+            }
         }
+//        StringTokenizer st = new StringTokenizer(savedString, ",");
+
+//        for (int i = 0; i < 10; i++) {
+//            savedList[i] = Integer.parseInt(st.nextToken());
+//        }
+//
+//        if (savedString != null) {
+//            for (int i = 0; i < savedList.length; i++) {
+//                itemList.get(savedList[i]).isViewed = true;
+//            }
+//        }
 
 //        for(int i=0; i<savedString.length(); i++){
 //            savedList[i] = Integer.parseInt(st.nextToken());
 //        }
 //
-        for (int i = 0; i < savedList.length; i++) {
-            itemList.get(savedList[i]).isViewed = true;
-        }
+
         //for loop {count according to array.length}
         // if pos = itemList(pos){
         // isViewed = true

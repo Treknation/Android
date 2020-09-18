@@ -36,7 +36,8 @@ public class LongDesc extends AppCompatActivity {
     private static final String TAG = "TAG";
     private static final String TAG2 = "LongDesc started";
     ArrayList<Item> mItemList;
-    ArrayList<Integer> list;
+    //    ArrayList<Integer> list;
+    int[] list = new int[10];
 
     private TextView txtItemName, txtLongDesc;
     private Button btnMarkComplete, btnCosts, btnSubmitEE, btnTestResult, btnTestCost, btnCEC, btnFSW, btnFST, btnInCanada, btnOutsideCanada;
@@ -76,17 +77,14 @@ public class LongDesc extends AppCompatActivity {
                     setResult(RESULT_OK, resultIntent);
                     Log.d(TAG, "onClick: Long Desc activity btnMarkComplete purav");
                     // Adding the item to shared preferences
-                    SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    Gson gson = new Gson();
-                    String json = gson.toJson(position);
-                    editor.putString("task list", json);
-                    editor.apply();
-
-
+//                    SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+//                    SharedPreferences.Editor editor = sharedPreferences.edit();
+//                    Gson gson = new Gson();
+//                    String json = gson.toJson(position);
+//                    editor.putString("task list", json);
+//                    editor.apply();
 //                    list.add(itemID);
 //                    System.out.println("Purav");
-//                    list.add(position);
 //                    for (int i = 0; i < list.length; i++) {
 //                        if (list == null) {
 //                            list = new int[]{itemID};
@@ -95,6 +93,17 @@ public class LongDesc extends AppCompatActivity {
 //                        }
 //                        str.append(list[i]).append(",");
 //                    }
+
+                    SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+                    SharedPreferences.Editor editor = prefs.edit();
+                    editor.putInt("name", itemID);
+                    editor.apply();
+//                    StringBuilder str = new StringBuilder();
+//                    for (int i = 0; i < list.length; i++) {
+//                        str.append(list[i]).append(",");
+//                    }
+//                    prefs.edit().putString("string", str.toString());
+//                    prefs.edit().commit();
 //                    sharedPreferences.edit().putString("string", str.toString());
 //                    System.out.println(list);
 //                    System.out.println("Purav");
