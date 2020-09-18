@@ -9,6 +9,7 @@ import androidx.constraintlayout.widget.ConstraintSet;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
@@ -25,11 +26,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+
+import java.util.ArrayList;
+
 public class LongDesc extends AppCompatActivity {
 
     public static final String ITEM_ID_KEY = "itemID";
     private static final String TAG = "TAG";
     private static final String TAG2 = "LongDesc started";
+    ArrayList<Item> mItemList;
+    ArrayList<Integer> list;
 
     private TextView txtItemName, txtLongDesc;
     private Button btnMarkComplete, btnCosts, btnSubmitEE, btnTestResult, btnTestCost, btnCEC, btnFSW, btnFST, btnInCanada, btnOutsideCanada;
@@ -55,7 +62,6 @@ public class LongDesc extends AppCompatActivity {
             }
         });
 
-
         Intent intent = getIntent();
         if (null != intent) {
             //check to see if final required or not; made itemID final since it was giving error while clicking on markasComplete putExtra
@@ -68,7 +74,34 @@ public class LongDesc extends AppCompatActivity {
                     resultIntent.putExtra("Item ID", itemID);
                     resultIntent.putExtra("Position", position);
                     setResult(RESULT_OK, resultIntent);
-                    Log.d(TAG, "onClick: Long Desc activity btnMarkComplete started");
+                    Log.d(TAG, "onClick: Long Desc activity btnMarkComplete purav");
+                    // Adding the item to shared preferences
+                    SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    Gson gson = new Gson();
+                    String json = gson.toJson(position);
+                    editor.putString("task list", json);
+                    editor.apply();
+
+
+//                    list.add(itemID);
+//                    System.out.println("Purav");
+//                    list.add(position);
+//                    for (int i = 0; i < list.length; i++) {
+//                        if (list == null) {
+//                            list = new int[]{itemID};
+//                        } else {
+//                            list.add(itemID);
+//                        }
+//                        str.append(list[i]).append(",");
+//                    }
+//                    sharedPreferences.edit().putString("string", str.toString());
+//                    System.out.println(list);
+//                    System.out.println("Purav");
+//                    String json = gson.toJson(mItemList);
+//                    editor.putString("task list", json);
+//                    editor.apply();
+                    // end
                     finish();
                 }
             });

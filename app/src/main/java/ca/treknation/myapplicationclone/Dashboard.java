@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -20,8 +21,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
+import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.StringTokenizer;
 
 public class Dashboard extends AppCompatActivity {
 
@@ -44,6 +49,7 @@ public class Dashboard extends AppCompatActivity {
 
     private static final String TAG1 = "TAG";
     String[] addresses = new String[]{"support@treknation.ca"};
+    int[] savedList = new int[13];
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -61,10 +67,31 @@ public class Dashboard extends AppCompatActivity {
         //Todo dummy code of adapter
         itemList = Utils.getInstance().getAllItems();
 
-        adapter = new RecycleViewItemListAdapter(this,itemList);
+        adapter = new RecycleViewItemListAdapter(this, itemList);
         itemRecView.setAdapter(adapter);
         itemRecView.setLayoutManager(new LinearLayoutManager(this));
+//        SharedPreferences sharedPreferences = getPreferences(MODE_PRIVATE);
+//        String savedString = sharedPreferences.getString("string", "");
+//        StringTokenizer st = new StringTokenizer(savedString, ",");
 
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("task list", null);
+        Type type = new TypeToken<ArrayList<Integer>>() {
+        }.getType();
+        savedList = gson.fromJson(json, type);
+
+        if (savedList == null) {
+            savedList = new int[0];
+        }
+
+//        for(int i=0; i<savedString.length(); i++){
+//            savedList[i] = Integer.parseInt(st.nextToken());
+//        }
+//
+        for (int i = 0; i < savedList.length; i++) {
+            itemList.get(savedList[i]).isViewed = true;
+        }
         //for loop {count according to array.length}
         // if pos = itemList(pos){
         // isViewed = true
@@ -163,7 +190,7 @@ public class Dashboard extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
-                Log.d(TAG, "onActivityResult: Dashboard activity started");
+                Log.d(TAG, "onActivityResult: Dashboard activity started purav");
                 int result = data.getIntExtra("Item ID", 0);
                 int position = data.getIntExtra("Position", 0);
                 itemList.get(position).isViewed = true;

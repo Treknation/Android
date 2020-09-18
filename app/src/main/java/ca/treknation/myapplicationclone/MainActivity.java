@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -41,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
     BottomNavigationView bottomNavigationView;
     Fragment mainFragment;
 
+    private static final String SHARED_PREFS = "sharedPrefs";
+    private static final String TEXT = "ahhsaushhuuashu";
+    private static final String KEY = "myKey";
+
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -53,9 +58,17 @@ public class MainActivity extends AppCompatActivity {
         txtTrekNation = findViewById(R.id.txtTrekNation);
         home_logo = findViewById(R.id.home_logo);
 
+
         //list of integers within shared preferences
+        int[] abc = new int[0];
         // create shared preferences, give name
+        SharedPreferences sharedPreferences = getSharedPreferences("myData", Context.MODE_PRIVATE);
         // sharedpreference.put 1 key = list of integers
+        StringBuilder str = new StringBuilder();
+        for (int i = 0; i < abc.length; i++) {
+            str.append(abc[i]).append(",");
+        }
+        sharedPreferences.edit().putString("string", str.toString());
         //use get.sharedpreferences in onCreate; check if there is a key first, if key present, pick array from key
         // for loop in dashboard
 
@@ -106,13 +119,18 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.N)
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1) {
             if (resultCode == RESULT_OK) {
-                Log.d(TAG, "onActivityResult: Main Activity Started");
+                Log.d(TAG, "onActivityResult: Main Activity Started purav");
                 int result = data.getIntExtra("Item ID", 0);
                 int position = data.getIntExtra("Position", 0);
+                SharedPreferences sharedPreferences = pContext.getSharedPreferences(SHARED_PREFS, MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean(itemList.get(position).getItemName(), true);
+                editor.apply();
                 itemList.get(position).isViewed = true;
                 adapter.setItems(itemList);
             }

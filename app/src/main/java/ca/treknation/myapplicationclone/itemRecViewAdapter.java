@@ -2,6 +2,7 @@ package ca.treknation.myapplicationclone;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +27,10 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
     private Context mContext;
     private static final String TAG = "itemRecViewAdapter started";
 
+    private static final String SHARED_PREFS = "sharedPrefs";
+    private static final String TEXT = "ahhsaushhuuashu";
+    private static final String KEY = "myKey";
+
     public itemRecViewAdapter(Context mContext) {
 
         this.mContext = mContext;
@@ -47,9 +52,18 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
+        SharedPreferences sharedPreferences = mContext.getSharedPreferences(SHARED_PREFS, Context.MODE_PRIVATE);
+        Boolean text = sharedPreferences.getBoolean(items.get(position).getItemName(), false);
         holder.txtItem.setText(items.get(position).getItemName());
         holder.txtShortDesc.setText(items.get(position).getItemShortDesc());
 //        holder.txtLongDesc.setText(items.get(position).getItemLongDesc());
+
+        if (text) {
+            items.get(position).isViewed = true;
+        } else {
+            items.get(position).isViewed = false;
+        }
+
 
         holder.downArrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -102,7 +116,7 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
         });
 
         if (items.get(position).isViewed) {
-            Log.d(TAG4, "onBindViewHolder: started");
+            Log.d(TAG4, "onBindViewHolder: Old Recycler view started purav");
             holder.collapsedRelLayout.setBackgroundColor(mContext.getResources().getColor(R.color.dark_slate_blue));
             holder.expandedRelLayout.setVisibility(View.GONE);
             items.get(position).setExpanded(false);

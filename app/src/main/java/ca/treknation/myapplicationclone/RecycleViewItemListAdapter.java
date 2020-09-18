@@ -2,6 +2,7 @@ package ca.treknation.myapplicationclone;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import java.util.ArrayList;
 import static ca.treknation.myapplicationclone.LongDesc.ITEM_ID_KEY;
 
 public class RecycleViewItemListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+    private static final String TAG = "TAG";
     private final Context context;
     ArrayList<Item> list;
 
@@ -104,6 +106,7 @@ public class RecycleViewItemListAdapter extends RecyclerView.Adapter<RecyclerVie
             });
 
             if (list.get(position).isViewed) {
+                Log.d(TAG, "bind: new Recycler View started purav");
                 collapsedRelLayout.setBackgroundColor(context.getResources().getColor(R.color.dark_slate_blue));
                 expandedRelLayout.setVisibility(View.GONE);
                 list.get(position).setExpanded(false);
