@@ -38,6 +38,7 @@ public class LongDesc extends AppCompatActivity {
     ArrayList<Item> mItemList;
     //    ArrayList<Integer> list;
     int[] list = new int[10];
+    private static final String PREFS_NAME = "preferenceName";
 
     private TextView txtItemName, txtLongDesc;
     private Button btnMarkComplete, btnCosts, btnSubmitEE, btnTestResult, btnTestCost, btnCEC, btnFSW, btnFST, btnInCanada, btnOutsideCanada;
@@ -75,6 +76,7 @@ public class LongDesc extends AppCompatActivity {
                     resultIntent.putExtra("Item ID", itemID);
                     resultIntent.putExtra("Position", position);
                     setResult(RESULT_OK, resultIntent);
+                    btnMarkComplete.setText("Completed");
                     Log.d(TAG, "onClick: Long Desc activity btnMarkComplete purav");
                     // Adding the item to shared preferences
 //                    SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
@@ -93,11 +95,20 @@ public class LongDesc extends AppCompatActivity {
 //                        }
 //                        str.append(list[i]).append(",");
 //                    }
-
+//                    Solution #1
                     SharedPreferences prefs = getPreferences(MODE_PRIVATE);
                     SharedPreferences.Editor editor = prefs.edit();
                     editor.putInt("name", itemID);
                     editor.apply();
+                    // Solution #1 End
+
+                    // Solution 2
+
+//                    public static boolean setPreference(Context context, String key, String value) {
+//                        SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+//                        SharedPreferences.Editor editor = settings.edit();
+//                        editor.putString(key, value);
+//                        return editor.commit(); }
 //                    StringBuilder str = new StringBuilder();
 //                    for (int i = 0; i < list.length; i++) {
 //                        str.append(list[i]).append(",");

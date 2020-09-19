@@ -83,9 +83,11 @@ public class Dashboard extends AppCompatActivity {
         SharedPreferences prefs = getPreferences(MODE_PRIVATE);
 //        String savedString = prefs.getString("string", "");
         int idName = prefs.getInt("idName", 0);
+        int i;
+//        savedList.add(idName);
 
         if (idName != 0) {
-            for (int i = 0; i < savedList.length; i++) {
+            for (i = 0; i < savedList.length; i++) {
                 itemList.get(savedList[i]).isViewed = true;
             }
         }
