@@ -80,18 +80,18 @@ public class Utils {
 
     private void initData() {
         //TODO: add initial data
-        allItems.add(new Item(1, "Overview", overview_short_desc, false, styled_overview_long_description));
-        allItems.add(new Item(2, "1. Find your NOC", noc_short_desc, false, styled_noc_long_description));
-        allItems.add(new Item(3, "2. Get your ECA", eca_short_desc, false, styled_eca_long_description));
-        allItems.add(new Item(4, "3. Language Tests", language_short_desc, false, styled_language_long_desc));
-        allItems.add(new Item(5, "4. Check Eligibility", eligibility_short_desc, false, styled_eligibility_long_desc));
-        allItems.add(new Item(6, "5. Calculate CRS Score", crs_short_desc, false, styled_crs_long_desc));
-        allItems.add(new Item(7, "6. Enter Express Entry Pool", pool_short_desc, false, styled_pool_long_desc));
-        allItems.add(new Item(8, "7. Receive your ITA", ita_short_desc, false, styled_ita_long_desc));
-        allItems.add(new Item(9, "8. Document Checklist", checklist_short_desc, false, styled_checklist_long_desc));
-        allItems.add(new Item(10, "9. E-APR Fees", fees_short_desc, false, styled_fees_long_desc));
-        allItems.add(new Item(11, "10. AOR to PPR", ppr_short_desc, false, styled_ppr_long_desc));
-        allItems.add(new Item(12, "11. Prepare for Landing", landing_short_desc, false, styled_landing_long_desc));
+        allItems.add(new Item(0, "Overview", overview_short_desc, false, styled_overview_long_description));
+        allItems.add(new Item(1, "1. Find your NOC", noc_short_desc, false, styled_noc_long_description));
+        allItems.add(new Item(2, "2. Get your ECA", eca_short_desc, false, styled_eca_long_description));
+        allItems.add(new Item(3, "3. Language Tests", language_short_desc, false, styled_language_long_desc));
+        allItems.add(new Item(4, "4. Check Eligibility", eligibility_short_desc, false, styled_eligibility_long_desc));
+        allItems.add(new Item(5, "5. Calculate CRS Score", crs_short_desc, false, styled_crs_long_desc));
+        allItems.add(new Item(6, "6. Enter Express Entry Pool", pool_short_desc, false, styled_pool_long_desc));
+        allItems.add(new Item(7, "7. Receive your ITA", ita_short_desc, false, styled_ita_long_desc));
+        allItems.add(new Item(8, "8. Document Checklist", checklist_short_desc, false, styled_checklist_long_desc));
+        allItems.add(new Item(9, "9. E-APR Fees", fees_short_desc, false, styled_fees_long_desc));
+        allItems.add(new Item(10, "10. AOR to PPR", ppr_short_desc, false, styled_ppr_long_desc));
+        allItems.add(new Item(11, "11. Prepare for Landing", landing_short_desc, false, styled_landing_long_desc));
     }
 
     public static Utils getInstance() {

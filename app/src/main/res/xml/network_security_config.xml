@@ -7,5 +7,6 @@
         <domain includeSubdomains="true">celpiptest.ca</domain>
         <domain includeSubdomains="true">treknation.ca</domain>
         <domain includeSubdomains="true">cbsa-asfc.gc.ca</domain>
+        <domain includeSubdomains="true">ciep.fr</domain>
     </domain-config>
 </network-security-config>

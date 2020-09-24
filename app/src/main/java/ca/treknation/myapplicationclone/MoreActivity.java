@@ -41,10 +41,15 @@ public class MoreActivity extends AppCompatActivity {
         txtFeedback.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "support@treknation.ca", null));
-//                emailIntent.setType("message/rfc822");
-//                emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
+                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+//                Intent emailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", "support@treknation.ca", null));
+/*
+                emailIntent.setType("message/rfc822");
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses);
+*/
+                emailIntent.putExtra(Intent.EXTRA_EMAIL, "contact@treknation.ca");
+                emailIntent.putExtra(Intent.EXTRA_SUBJECT, "User Feedback");
+//                emailIntent.putExtra(Intent.EXTRA_SUBJECT, subject);
                 startActivity(Intent.createChooser(emailIntent, "Send email..."));
             }
         });

@@ -39,12 +39,6 @@ public class PrivacyPolicy extends AppCompatActivity {
         Spanned styled_privacy_policy_desc = Html.fromHtml(txt_privacy_policy, Html.FROM_HTML_MODE_LEGACY);
         setTextViewHTML(txtPrivacyPolicy, styled_privacy_policy_desc);
 
-        btnBackArrow.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PrivacyPolicy.this.finish();
-            }
-        });
     }
 
     protected void makeLinkClickable(SpannableStringBuilder strBuilder, final URLSpan span) {
@@ -77,6 +71,5 @@ public class PrivacyPolicy extends AppCompatActivity {
     private void initViews() {
         btnBackArrow = findViewById(R.id.btnBackArrow);
         txtPrivacyPolicy = findViewById(R.id.txtPrivacyPolicy);
-
     }
 }

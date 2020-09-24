@@ -61,7 +61,7 @@ public class RecycleViewItemListAdapter extends RecyclerView.Adapter<RecyclerVie
                     Item item = list.get(finalPosition);
                     item.setExpanded(!item.isExpanded());
                     if (!list.get(finalPosition).isViewed) {
-                        TransitionManager.beginDelayedTransition(parent);
+//                        TransitionManager.beginDelayedTransition(parent);
                         expandedRelLayout.setVisibility(View.VISIBLE);
                         downArrow.setVisibility(View.GONE);
                         upArrow.setVisibility(View.VISIBLE);
@@ -75,7 +75,7 @@ public class RecycleViewItemListAdapter extends RecyclerView.Adapter<RecyclerVie
                     Item item = list.get(finalPosition);
                     item.setExpanded(!item.isExpanded());
                     if (!list.get(finalPosition).isViewed) {
-                        TransitionManager.beginDelayedTransition(parent);
+//                        TransitionManager.beginDelayedTransition(parent);
                         expandedRelLayout.setVisibility(View.GONE);
                         downArrow.setVisibility(View.VISIBLE);
                         upArrow.setVisibility(View.GONE);

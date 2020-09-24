@@ -14,6 +14,10 @@
     <string name="landing_short_desc">Congratulations!! now that you have received your CoPR you are just one step away from getting your PR card. The next steps will depend on whether you are inside or outside of Canada.</string>
 
     <string name="overview_long_description">
+         &lt;b>What is Express Entry?&lt;/b>&lt;br /&gt;
+        &lt;br /&gt;
+        Express Entry (EE) is an online immigration system which allows people to submit a profile and be considered as a skilled immigrant. Candidates with the highest rankings are invited to apply for permanent residency.&lt;br /&gt;
+        &lt;br /&gt;
         &lt;b>How does Express Entry Work?&lt;/b>&lt;br /&gt;
         &lt;br /&gt;
         1. Express Entry works by submitting an online profile for determining eligibility for the one of the below programs:&lt;br /&gt;
@@ -88,7 +92,6 @@
         • Pharmacy Examining Board of Canada (professional body for pharmacists) - For pharmacists (NOC 3131).&lt;br /&gt;
         &lt;br /&gt;
         An ECA is valid for a period of 5 years from the date it is issued.&lt;br /&gt;
-        &lt;br /&gt;
     </string>
     <string name="language_long_desc">
         For all the three Express Entry programs, you need to take English and/or French test(s) and score a minimum score to be eligible.&lt;br /&gt;
@@ -126,11 +129,11 @@
           1. &lt;a href="https://www.lefrancaisdesaffaires.fr/tests-diplomes/test-evaluation-francais-tef/tef-canada/">TEF Canada&lt;//a>&lt;br /&gt;
           2. &lt;a href="http://www.ciep.fr/tcf-canada">TCF Canada&lt;//a>&lt;br /&gt;
         &lt;br /&gt;
-        For Express Entry, you need to take the general category for the above-mentioned language tests.
+        For Express Entry, you need to take the general category for the above-mentioned language tests.&lt;br /&gt;
     </string>
 
     <string name="eligibility_long_desc">
-        There are minimum eligibility requirements for all 3 programs within Express Entry that need to be met by the applicant as shown below:
+        There are minimum eligibility requirements for all 3 programs within Express Entry that need to be met by the applicant as shown below:&lt;br /&gt;
     </string>
 
     <string name="crs_long_desc">
@@ -141,8 +144,10 @@
         • Increasing the points with the language test is the easiest and surest way of increasing the CRS score. So, it\'s best if you give the language test after sufficient practice. For example, increasing your score from CLB 7 to CLB 9 in each section increases your score by 14 points per section. So, in total your points increase by a total of 56 (14 x 4).&lt;br /&gt;
         • You can also earn extra points for your Secondary language abilities. You can earn 4 additional points if you get the score in the below range:&lt;br /&gt;
         &lt;br /&gt;
-            &#160; &#160; &#160; &#160; &#160; &#160; &#160; • Speaking, Listening and Writing: CLB 5 - CLB 9&lt;br /&gt;
-            &#160; &#160; &#160; &#160; &#160; &#160; &#160; • Reading: CLB 4 - CLB 9&lt;br /&gt;
+            &#160; &#160; &#160; &#160; &#160; &#160; &#160; • &#160;Listening: CLB 5 - CLB 9&lt;br /&gt;
+            &#160; &#160; &#160; &#160; &#160; &#160; &#160; • &#160;Speaking: CLB 5 - CLB 9&lt;br /&gt;
+            &#160; &#160; &#160; &#160; &#160; &#160; &#160; • &#160;Writing: CLB 5 - CLB 9&lt;br /&gt;
+            &#160; &#160; &#160; &#160; &#160; &#160; &#160; • &#160;Reading: CLB 4 - CLB 9&lt;br /&gt;
         &lt;br /&gt;
         &lt;b>Education Points&lt;/b>&lt;br /&gt;
         &lt;br /&gt;
@@ -165,7 +170,6 @@
         &lt;b>Provincial Nominee Programs&lt;/b>&lt;br /&gt;
         &lt;br /&gt;
         If you are short of points even after trying all the above methods, you should try to apply for PNP. Getting a nomination through PNP gives you an additional 600 points. You can find more information for PNP for each of the provinces at this &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/provincial-nominees/works.html">link&lt;//a>.&lt;br /&gt;
-        &lt;br /&gt;
     </string>
 
     <string name="pool_long_desc">
@@ -187,7 +191,7 @@
         • Enter personal preference code. This should pre-fill some of the details. Fill in the rest of personal.&lt;br /&gt;
         &lt;br /&gt;
         &lt;br /&gt;
-        Note: You have 60 days to fill up and submit your profile.
+        Note: You have 60 days to fill up and submit your profile.&lt;br /&gt;
     </string>
 
 
@@ -213,7 +217,7 @@
         &lt;br /&gt;
         If you accept the ITA you will need to -&lt;br /&gt;
         Fill out a form similar to ones in the Express Entry profile. Instructions to fill out the form are mentioned in the ITA pdf file received in the messages section of your profile. You will be asked for additional details. For e.g. Provide Address and Travel history for the past 10 years or from your 18th birthday. You would need to provide a Letter of Explanation if necessary.&lt;br /&gt;
-        Once you submit the form a personalized document checklist will be created which you can cover in the next steps.
+        Once you submit the form a personalized document checklist will be created which you can cover in the next steps.&lt;br /&gt;
     </string>
 
 
@@ -315,7 +319,6 @@
         • A permanent resident visa (if you are from a country that requires a visa)&lt;br /&gt;
         &lt;br /&gt;
         Your COPR will have information about who you are, as well as your photograph. Your COPR is valid for a limited time so use it before it expires.&lt;br /&gt;
-        &lt;br /&gt;
     </string>
     <string name="landing_long_desc">
         The following guidelines provide you detailed instructions depending on whether you are outside Canada or inside Canada.
@@ -325,7 +328,7 @@
 
 
     <string name="cec_desc">
-        To qualify for CEC, you must"\n"
+        "\n"To qualify for CEC, you must"\n"
         "\n"
         • Have a minimum of one year of work experience in NOC skill type 0, A, or B in Canada (either full-time, 30 h/week, or an equivalent amount part-time, at least 15 h/week). Self-employment and internships are not counted under this program"\n"
         "\n"
@@ -456,7 +459,7 @@
     </string>
 
     <string name="convert_language_results">
-        For each test, there is a conversion table from the test mark per ability (speaking, reading, listening, writing) to the Canadian Level Benchmark (CLB). CLBs are the norm for assessing language ability by IRCC. You can check your conversion through this &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements/language-testing.html">link&lt;//a>.
+        &lt;br /&gt;For each test, there is a conversion table from the test mark per ability (speaking, reading, listening, writing) to the Canadian Level Benchmark (CLB). CLBs are the norm for assessing language ability by IRCC. You can check your conversion through this &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/language-requirements/language-testing.html">link&lt;//a>.
     </string>
 
     <string name="privacy_policy">
@@ -521,15 +524,17 @@
         &lt;br /&gt;
         &lt;b>Contact Us&lt;/b>&lt;br /&gt;
         &lt;br /&gt;
-        If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at &lt;a href="mailto:support@treknation.ca">support@treknation.ca&lt;//a>&lt;br /&gt;
+        If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at support@treknation.ca&lt;br /&gt;
     </string>
 
     <string name="cic_long_desc">
         &lt;b>Phone Number&lt;/b>&lt;br /&gt;
         +1 888 242 2100&lt;br /&gt;
+        &lt;br /&gt;
         You can get in touch with CIC by calling the above provided number. If you are calling from outside Canada, you may require international calling services enabled. You can also try using apps like TextNow, if you are not inside Canada.&lt;br /&gt;
         &lt;br /&gt;
         &lt;b>Webform&lt;/b>&lt;br /&gt;
+        &lt;br /&gt;
         Use the following link to fill out a webform for enquiries and for updating any change in your information - &lt;a href="https://www.cic.gc.ca/english/contacts/web-form.asp">Webform&lt;//a>&lt;br /&gt;
     </string>
 

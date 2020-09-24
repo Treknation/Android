@@ -115,6 +115,16 @@ public class itemRecViewAdapter extends RecyclerView.Adapter<itemRecViewAdapter.
             }
         });
 
+        holder.txtItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, LongDesc.class);
+                intent.putExtra(ITEM_ID_KEY, items.get(position).getId());
+                intent.putExtra("Position", position);
+                ((Dashboard) mContext).startActivityForResult(intent, 1);
+            }
+        });
+
         if (items.get(position).isViewed) {
             Log.d(TAG4, "onBindViewHolder: Old Recycler view started purav");
             holder.collapsedRelLayout.setBackgroundColor(mContext.getResources().getColor(R.color.dark_slate_blue));

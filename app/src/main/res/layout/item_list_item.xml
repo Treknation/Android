@@ -27,10 +27,16 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="15dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizeMinTextSize="12sp"
+                android:autoSizeMaxTextSize="100sp"
+                app:autoSizeTextType="uniform"
+                app:autoSizeMinTextSize="12sp"
+                app:autoSizeMaxTextSize="100sp"
                 android:fontFamily="@font/hindsemibold"
                 android:text="Item Name"
                 android:textColor="#143d59"
-                android:textSize="16sp" />
+                android:textSize="18sp" />
 
             <ImageView
                 android:id="@+id/btnDownArrow"
@@ -88,6 +94,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/line"
+                android:textSize="15sp"
                 android:autoSizeTextType="uniform"
                 android:autoSizeMinTextSize="12sp"
                 android:autoSizeMaxTextSize="100sp"

@@ -64,11 +64,20 @@ public class LongDesc extends AppCompatActivity {
             }
         });
 
+
         Intent intent = getIntent();
         if (null != intent) {
             //check to see if final required or not; made itemID final since it was giving error while clicking on markasComplete putExtra
             final int itemID = intent.getIntExtra(ITEM_ID_KEY, -1);
             final int position = intent.getIntExtra("Position", -1);
+
+            SharedPreferences prefs = getSharedPreferences("Shared Preference", MODE_PRIVATE);
+            int idName = prefs.getInt("name" + itemID, 1000);
+
+            if (idName == itemID) {
+                btnMarkComplete.setText("Completed");
+            }
+
             btnMarkComplete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -96,9 +105,10 @@ public class LongDesc extends AppCompatActivity {
 //                        str.append(list[i]).append(",");
 //                    }
 //                    Solution #1
-                    SharedPreferences prefs = getPreferences(MODE_PRIVATE);
+                    SharedPreferences prefs = getSharedPreferences("Shared Preference", MODE_PRIVATE);
+                    Log.d(TAG, "onClick: ");
                     SharedPreferences.Editor editor = prefs.edit();
-                    editor.putInt("name", itemID);
+                    editor.putInt("name" + itemID, itemID);
                     editor.apply();
                     // Solution #1 End
 
@@ -136,7 +146,7 @@ public class LongDesc extends AppCompatActivity {
                 if (null != incomingItem) {
                     setData(incomingItem);
                 }
-                if (itemID != 3) {
+                if (itemID != 2) {
                     btnCosts.setVisibility(View.GONE);
                     btnSubmitEE.setVisibility(View.GONE);
                     btnCostsArrow.setVisibility(View.GONE);
@@ -168,7 +178,7 @@ public class LongDesc extends AppCompatActivity {
                         }
                     });
                 }
-                if ((itemID != 4)) {
+                if ((itemID != 3)) {
                     btnTestResult.setVisibility(View.GONE);
                     btnTestCost.setVisibility(View.GONE);
                     btnTestResultArrow.setVisibility(View.GONE);
@@ -201,7 +211,7 @@ public class LongDesc extends AppCompatActivity {
                     });
                 }
 
-                if ((itemID != 5)) {
+                if ((itemID != 4)) {
                     btnCEC.setVisibility(View.GONE);
                     btnFST.setVisibility(View.GONE);
                     btnFSW.setVisibility(View.GONE);
@@ -248,7 +258,7 @@ public class LongDesc extends AppCompatActivity {
 
                 }
 
-                if ((itemID != 12)) {
+                if ((itemID != 11)) {
                     btnInCanada.setVisibility(View.GONE);
                     btnOutsideCanada.setVisibility(View.GONE);
                     btnInCanadaArrow.setVisibility(View.GONE);

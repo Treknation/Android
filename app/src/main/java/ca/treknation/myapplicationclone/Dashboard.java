@@ -57,15 +57,29 @@ public class Dashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
         initView();
+        itemList = new ArrayList<>();
+        itemList = Utils.getInstance().getAllItems();
+
+        SharedPreferences prefs = getSharedPreferences("Shared Preference", MODE_PRIVATE);
+
+        System.out.println("Before" + itemList);
+        for (int i = 0; i < itemList.size(); i++) {
+            int idName = prefs.getInt("name" + itemList.get(i).getId(), 1000);
+            System.out.println("IDname" + idName);
+            if (itemList.get(i).getId() == idName) {
+
+                itemList.get(i).isViewed = true;
+            }
+        }
+        System.out.println("After" + itemList);
 
         itemRecView = findViewById(R.id.itemRecView);
         txtTrekNation = findViewById(R.id.txtTrekNation);
         home_logo = findViewById(R.id.home_logo);
 
-        itemList = new ArrayList<>();
 
         //Todo dummy code of adapter
-        itemList = Utils.getInstance().getAllItems();
+
 
         adapter = new RecycleViewItemListAdapter(this, itemList);
         itemRecView.setAdapter(adapter);
@@ -80,17 +94,7 @@ public class Dashboard extends AppCompatActivity {
 //        Type type = new TypeToken<ArrayList<Integer>>() {
 //        }.getType();
 //        savedList = gson.fromJson(json, type);
-        SharedPreferences prefs = getPreferences(MODE_PRIVATE);
-//        String savedString = prefs.getString("string", "");
-        int idName = prefs.getInt("idName", 0);
-        int i;
-//        savedList.add(idName);
 
-        if (idName != 0) {
-            for (i = 0; i < savedList.length; i++) {
-                itemList.get(savedList[i]).isViewed = true;
-            }
-        }
 //        StringTokenizer st = new StringTokenizer(savedString, ",");
 
 //        for (int i = 0; i < 10; i++) {
