@@ -92,6 +92,34 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
+                <TextView
+                    android:id="@+id/txtCRSCalculator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:autoSizeMaxTextSize="100sp"
+                    android:autoSizeMinTextSize="12sp"
+                    android:autoSizeTextType="uniform"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/sourcesansproregular"
+                    android:includeFontPadding="false"
+                    android:paddingStart="17dp"
+                    android:paddingEnd="17dp"
+                    android:layout_marginTop="4dp"
+                    android:scrollbars="vertical"
+                    android:text="@string/link_to_crs_calculator"
+                    android:textColor="@color/charcoal_grey"
+                    android:textColorLink="#077cc5"
+                    android:textSize="16sp"
+                    app:autoSizeMaxTextSize="100sp"
+                    app:autoSizeMinTextSize="12sp"
+                    app:autoSizeTextType="uniform"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtLongDesc" />
+
+
+
                 <Button
                     android:id="@+id/btnCosts"
                     android:layout_width="match_parent"
@@ -111,7 +139,7 @@
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtLongDesc" />
+                    app:layout_constraintTop_toBottomOf="@+id/txtCRSCalculator" />
 
                 <ImageView
                     android:id="@+id/btnCostsArrow"
@@ -245,7 +273,7 @@
                     app:layout_constraintCircleRadius="7dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtLongDesc" />
+                    app:layout_constraintTop_toBottomOf="@+id/txtCRSCalculator" />
 
                 <ImageView
                     android:id="@+id/btnCECArrow"
@@ -322,71 +350,6 @@
                     app:layout_constraintBottom_toBottomOf="@+id/btnFST"
                     app:layout_constraintEnd_toEndOf="@+id/btnFST"
                     app:layout_constraintTop_toTopOf="@+id/btnFST" />
-
-                <Button
-                    android:id="@+id/btnInCanada"
-                    android:layout_width="match_parent"
-                    android:layout_height="49dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="10dp"
-                    android:backgroundTint="#ffffff"
-                    android:fontFamily="@font/hindsemibold"
-                    android:gravity="left|center_vertical"
-                    android:text="If you are already in Canada"
-                    android:textAllCaps="false"
-                    android:textColor="@color/dark_slate_blue"
-                    android:textSize="16sp"
-                    app:layout_constraintCircleRadius="7dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtLongDesc" />
-
-                <ImageView
-                    android:id="@+id/btnInCanadaArrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="26dp"
-                    android:layout_toEndOf="@id/btnInCanada"
-                    android:elevation="2dp"
-                    android:src="@drawable/open"
-                    app:layout_constraintBottom_toBottomOf="@+id/btnInCanada"
-                    app:layout_constraintEnd_toEndOf="@+id/btnInCanada"
-                    app:layout_constraintTop_toTopOf="@+id/btnInCanada" />
-
-                <Button
-                    android:id="@+id/btnOutsideCanada"
-                    android:layout_width="match_parent"
-                    android:layout_height="49dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginBottom="20dp"
-                    android:backgroundTint="#ffffff"
-                    android:fontFamily="@font/hindsemibold"
-                    android:gravity="left|center_vertical"
-                    android:text="If you are outside Canada"
-                    android:textAllCaps="false"
-                    android:textColor="#143d59"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/btnMarkComplete"
-                    app:layout_constraintCircleRadius="7dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/btnInCanada" />
-
-                <ImageView
-                    android:id="@+id/btnOutsideCanadaArrow"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginRight="26dp"
-                    android:layout_toEndOf="@id/btnOutsideCanada"
-                    android:elevation="2dp"
-                    android:src="@drawable/open"
-                    app:layout_constraintBottom_toBottomOf="@+id/btnOutsideCanada"
-                    app:layout_constraintEnd_toEndOf="@+id/btnOutsideCanada"
-                    app:layout_constraintTop_toTopOf="@+id/btnOutsideCanada" />
 
                 <Button
                     android:id="@+id/btnMarkComplete"

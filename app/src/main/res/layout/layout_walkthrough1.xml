@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/onBoarding_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"
+        android:layout_marginBottom="20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTrackNationApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/onboarding_tracknation_pic" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDevice"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginTop="96dp"
+            android:layout_below="@+id/ivTrackNationApp"
+            android:src="@drawable/ic_device" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPermanentAddress"
+            style="@style/Text.Slate.18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp"
+            android:fontFamily="@font/commissioner_thin_medium"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="56dp"
+            android:layout_below="@+id/ivDevice"
+            android:text="@string/permanent_address"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnGetStarted"
+            style="@style/OvalTextView.LightBlue.TextBlue.14sp"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="48dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginEnd="67dp"
+            android:layout_marginBottom="16dp"
+            android:textAllCaps="false"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:layout_below="@+id/tvPermanentAddress"
+            android:layout_marginTop="54dp"
+            android:text="@string/get_started"/>
+    </RelativeLayout>
+</LinearLayout>

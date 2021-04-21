@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="textSize18sp">18sp</dimen>
+    <dimen name="textSize14sp">14sp</dimen>
+    <dimen name="textSize24sp">24sp</dimen>
+    <dimen name="pagetitl16dp">16dp</dimen>
+    <dimen name="step_height">130dp</dimen>
+</resources>

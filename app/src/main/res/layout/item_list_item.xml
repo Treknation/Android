@@ -6,8 +6,8 @@
     android:layout_height="wrap_content"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
+    android:layout_marginTop="15px"
     app:cardCornerRadius="7dp"
-    app:cardElevation="5dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true">
 
@@ -55,7 +55,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="16dp"
-                android:src="@drawable/complete"
+                android:background="@drawable/ic_icon_complete_white_color"
                 android:visibility="gone" />
 
         </RelativeLayout>

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/pagetitl16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/sourcesansprosemibold"
+                android:gravity="center"
+                android:text="@string/calculate_crs_score"
+                android:textAlignment="center"
+                android:layout_centerInParent="true"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="18sp"
+                app:autoSizeMaxTextSize="100sp"
+                app:autoSizeMinTextSize="18sp"
+                app:autoSizeTextType="uniform" />
+
+            <ImageView
+                android:padding="8dp"
+                android:id="@+id/btnBackArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/ic_icon_back" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/llAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="47dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rlHeader">
+
+            <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:background="@color/lightBlue"
+                android:gravity="center_vertical"
+                android:paddingStart="26dp"
+                android:paddingTop="19dp"
+                android:paddingBottom="19dp"
+                android:text="@string/education"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/textSize18sp" />
+
+            <TextView
+                android:id="@+id/tvAgeScore"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.5"
+                android:background="@color/dark_slate_blue"
+                android:gravity="center"
+                android:paddingTop="19dp"
+                android:paddingBottom="19dp"
+                android:text="@string/_0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/textSize18sp" />
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/llAge">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/tvSelectAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="31dp"
+            android:text="@string/outside_canada_edu"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/textSize18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <RadioGroup
+            android:id="@+id/rg_outside_canada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSelectAge">
+
+            <RadioButton
+                android:id="@+id/cb_HighSchool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="20dp"
+                android:padding="8dp"
+                android:text="@string/less_than_secondary_school_high_school"
+                android:textColor="@color/dark_slate_blue"
+                android:button="@drawable/radio_button_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rg_outside_canada" />
+
+            <RadioButton
+                android:id="@+id/cb_secondary_diploma_high_school_graduation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:padding="8dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/secondary_diploma_high_school_graduation"
+                android:button="@drawable/radio_button_background"
+                android:textColor="@color/dark_slate_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_HighSchool" />
+
+            <RadioButton
+                android:id="@+id/cb_one_year_degree_diploma_or_certificate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:padding="8dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/one_year_degree_diploma_or_certificate_from_a_university_college_trade_or_technical_school_or_other_institute"
+                android:textColor="@color/dark_slate_blue"
+                android:button="@drawable/radio_button_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_secondary_diploma_high_school_graduation" />
+
+
+            <RadioButton
+                android:id="@+id/cb_two_year_program_at_a_university_college"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:padding="8dp"
+                android:layout_marginTop="15dp"
+                android:button="@drawable/radio_button_background"
+                android:text="@string/two_year_program_at_a_university_college_trade_or_technical_school_or_other_institute"
+                android:textColor="@color/dark_slate_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_one_year_degree_diploma_or_certificate" />
+
+            <RadioButton
+                android:id="@+id/cb_bachelor_s_degree_or_a_three"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:padding="8dp"
+                android:layout_marginTop="15dp"
+                android:button="@drawable/radio_button_background"
+                android:text="@string/bachelor_s_degree_or_a_three_or_more_year_program_at_a_university_college_trade_or_technical_school_or_other_institute"
+                android:textColor="@color/dark_slate_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_two_year_program_at_a_university_college" />
+
+
+            <RadioButton
+                android:id="@+id/cb_two_or_more_certificates_diplomas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:padding="8dp"
+                android:layout_marginTop="15dp"
+                android:button="@drawable/radio_button_background"
+                android:text="@string/two_or_more_certificates_diplomas_or_degrees_one_must_be_for_a_program_of_three_or_more_years"
+                android:textColor="@color/dark_slate_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_bachelor_s_degree_or_a_three" />
+
+
+            <RadioButton
+                android:id="@+id/cb_master_s_degree_or_professional_degree_needed_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:padding="8dp"
+                android:layout_marginTop="15dp"
+                android:button="@drawable/radio_button_background"
+                android:text="@string/master_s_degree_or_professional_degree_needed_to_practice_in_a_licensed_profession_for_professional_degree_the_degree_program_must_have_been_in_medicine_veterinary_medicine_dentistry_optometry_law_chiropractic_medicine_or_pharmacy"
+                android:textColor="@color/dark_slate_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_two_or_more_certificates_diplomas" />
+
+            <RadioButton
+                android:id="@+id/cb_doctoral_level_university_degree_ph_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:padding="8dp"
+                android:layout_marginTop="15dp"
+                android:button="@drawable/radio_button_background"
+                android:text="@string/doctoral_level_university_degree_ph_d"
+                android:textColor="@color/dark_slate_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cb_master_s_degree_or_professional_degree_needed_" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/tvSelectAgeInsideCanada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="31dp"
+            android:text="@string/inside_canada_edu"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/textSize18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rg_outside_canada" />
+
+        <RadioGroup
+            android:id="@+id/gr_inside_canada"
+            android:layout_width="match_parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSelectAgeInsideCanada"
+            android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:id="@+id/cb_HighSchool_inside_canada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:padding="8dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/secondary_high_school"
+            android:button="@drawable/radio_button_background"
+            android:textColor="@color/dark_slate_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gr_inside_canada" />
+
+        <RadioButton
+            android:id="@+id/cb_one_two_year_dip_feg_inside_canada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:padding="8dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/_1_or_2_year_degree_or_diploma"
+            android:button="@drawable/radio_button_background"
+            android:textColor="@color/dark_slate_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_HighSchool_inside_canada" />
+
+        <RadioButton
+            android:id="@+id/cb_3plus_inside_canada"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:padding="8dp"
+            android:layout_marginTop="15dp"
+            android:button="@drawable/radio_button_background"
+            android:text="@string/degree_diploma_or_certificate_of_three_years_or_longer"
+            android:textColor="@color/dark_slate_blue"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cb_one_two_year_dip_feg_inside_canada" />
+
+        </RadioGroup>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAdd"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="67dp"
+            android:layout_marginBottom="108dp"
+            android:background="@drawable/oval_button_blue"
+            android:text="Add Education"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/textSize14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gr_inside_canada" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/clInsideCanada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="tvSelectAgeInsideCanada,gr_inside_canada" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

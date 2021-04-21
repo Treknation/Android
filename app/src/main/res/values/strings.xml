@@ -12,6 +12,7 @@
     <string name="fees_short_desc">Once you fill out the online form and upload the documents in the last step, you will be shown fees you need to pay for your e-APR (Electronic Application for Permanent Residence).</string>
     <string name="ppr_short_desc">After submitting your e-APR, you will receive an Acknowledgement of Receipt (AOR). This is the AOR date and is the date from when your 6 months intended processing time begins. Once IRCC has reviewed your biometrics, background checks, and medical examinations evaluations you will get a golden email for Passport Request (PPR).</string>
     <string name="landing_short_desc">Congratulations!! now that you have received your CoPR you are just one step away from getting your PR card. The next steps will depend on whether you are inside or outside of Canada.</string>
+    <string name="clear">clear</string>
 
     <string name="overview_long_description">
          &lt;b>What is Express Entry?&lt;/b>&lt;br /&gt;
@@ -230,7 +231,7 @@
         • Passport&lt;br /&gt;
         • Marriage Certificate / Common law proof/ Divorce-Proof&lt;br /&gt;
         • Dependent Children (Birth Certificate, LOE if you don\'t have the birth certificate, proof of adoption)&lt;br /&gt;
-        • Digital Photograph (See specification - Link)&lt;br /&gt;
+        • &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/pr-card/apply-renew-replace/photo.html">Digital Photograph&lt;//a>&lt;br /&gt;
         &lt;br /&gt;
         &lt;b>Mandatory documents&lt;/b>&lt;br /&gt;
         • Police Certification&lt;br /&gt;
@@ -258,7 +259,85 @@
         • The document must be stamped with the translator’s certification or registration number&lt;br /&gt;
         • You can indicate that you’re not providing an affidavit because a certified translator completed the translation (write a letter and scan it with your translated document)&lt;br /&gt;
         &lt;br /&gt;
-        If you feel like a document you are submitting might raise the slightest question from an immigration officer, you should add a &lt;a href="https://docs.google.com/document/d/1-31XMpXjR80ttZ9SGGSeJtBJqwI3LGLW/edit">Letter of Explanation&lt;//a> (LoE) (sample in the link) to your documents. For example, if it concerns your passport section, then add your LoE to the PDF file that you will upload to the passport section.&lt;br /&gt;
+        If you feel like a document you are submitting might raise the slightest question from an immigration officer, you should add a &lt;a href="https://docs.google.com/file/d/19NvaeMYNc2-jfc8atrkGtJWKUSk-CPo1/edit?usp=docslist_api&amp;filetype=msword">Letter of Explanation&lt;//a> (LoE) (sample in the link) to your documents. For example, if it concerns your passport section, then add your LoE to the PDF file that you will upload to the passport section.&lt;br /&gt;
+    </string>
+    <string name="single_checklist_long_desc">
+        Once you fill out the post ITA application forms a personalized document checklist is created for you. Since you only have 60 days to gather all documents and to submit them we recommend starting the process ASAP so that you can avoid delays.&lt;br /&gt;
+        &lt;br /&gt;
+        The document checklist is mostly made up of the following section. You would need to upload documents in each of these sections. You would need to make sure that the size of the file is no larger than 4 MB. The file formats you can upload are .tiff, .jpg, .png, .doc, .docx and .pdf.&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Identification documents&lt;/b>&lt;br /&gt;
+        • Passport&lt;br /&gt;
+        • Divorce-Proof (if applicable)&lt;br /&gt;
+        • &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/pr-card/apply-renew-replace/photo.html">Digital Photograph&lt;//a>&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Mandatory documents&lt;/b>&lt;br /&gt;
+        • Police Certification&lt;br /&gt;
+        • Medical Exam&lt;br /&gt;
+        • &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html">Proof of funds&lt;//a>&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Other documents as applicable&lt;/b>&lt;br /&gt;
+        • Work experience&lt;br /&gt;
+        • Study&lt;br /&gt;
+        • Canadian Job offer&lt;br /&gt;
+        • Relatives&lt;br /&gt;
+        • Certificate of qualification&lt;br /&gt;
+        • Other names&lt;br /&gt;
+        • Use of representatives&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Tips&lt;/b>&lt;br /&gt;
+        &lt;br /&gt;
+        If one of your documents is in a language other than English or French, you must also upload:&lt;br /&gt;
+        • An English or French translation&lt;br /&gt;
+        • A &lt;a href="http://www.cic.gc.ca/english/helpcentre/glossary.asp#certified_photocopy">certified photocopy&lt;//a> of the original document&lt;br /&gt;
+        • An &lt;a href="http://www.cic.gc.ca/english/helpcentre/glossary.asp#affidavit">affidavit&lt;//a> from the person who completed the translation (if they’re not a &lt;a href="http://www.cic.gc.ca/english/helpcentre/glossary.asp#certified_translator">certified translator&lt;//a>)&lt;br /&gt;
+        &lt;br /&gt;
+        If a certified translator completed your translation:&lt;br /&gt;
+        &lt;br /&gt;
+        • The document must be stamped with the translator’s certification or registration number&lt;br /&gt;
+        • You can indicate that you’re not providing an affidavit because a certified translator completed the translation (write a letter and scan it with your translated document)&lt;br /&gt;
+        &lt;br /&gt;
+        If you feel like a document you are submitting might raise the slightest question from an immigration officer, you should add a &lt;a href="https://docs.google.com/file/d/19NvaeMYNc2-jfc8atrkGtJWKUSk-CPo1/edit?usp=docslist_api&amp;filetype=msword">Letter of Explanation&lt;//a> (LoE) (sample in the link) to your documents. For example, if it concerns your passport section, then add your LoE to the PDF file that you will upload to the passport section.&lt;br /&gt;
+    </string>
+    <string name="married_checklist_long_desc">
+        Once you fill out the post ITA application forms a personalized document checklist is created for you. Since you only have 60 days to gather all documents and to submit them we recommend starting the process ASAP so that you can avoid delays.&lt;br /&gt;
+        &lt;br /&gt;
+        The document checklist is mostly made up of the following section. You would need to upload documents in each of these sections. You would need to make sure that the size of the file is no larger than 4 MB. The file formats you can upload are .tiff, .jpg, .png, .doc, .docx and .pdf.&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Identification documents&lt;/b>&lt;br /&gt;
+        • Passport&lt;br /&gt;
+        • Marriage Certificate / Common law proof/ Divorce-Proof&lt;br /&gt;
+        • &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/pr-card/apply-renew-replace/photo.html">Digital Photograph&lt;//a>&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Mandatory documents&lt;/b>&lt;br /&gt;
+        • Police Certification&lt;br /&gt;
+        • Medical Exam&lt;br /&gt;
+        • &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html">Proof of funds&lt;//a>&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Other documents as applicable&lt;/b>&lt;br /&gt;
+        • Work experience&lt;br /&gt;
+        • Spousal Work experience&lt;br /&gt;
+        • Study&lt;br /&gt;
+        • Spousal Study&lt;br /&gt;
+        • Canadian Job offer&lt;br /&gt;
+        • Relatives&lt;br /&gt;
+        • Certificate of qualification&lt;br /&gt;
+        • Other names&lt;br /&gt;
+        • Use of representatives&lt;br /&gt;
+        &lt;br /&gt;
+        &lt;b>Tips&lt;/b>&lt;br /&gt;
+        &lt;br /&gt;
+        If one of your documents is in a language other than English or French, you must also upload:&lt;br /&gt;
+        • An English or French translation&lt;br /&gt;
+        • A &lt;a href="http://www.cic.gc.ca/english/helpcentre/glossary.asp#certified_photocopy">certified photocopy&lt;//a> of the original document&lt;br /&gt;
+        • An &lt;a href="http://www.cic.gc.ca/english/helpcentre/glossary.asp#affidavit">affidavit&lt;//a> from the person who completed the translation (if they’re not a &lt;a href="http://www.cic.gc.ca/english/helpcentre/glossary.asp#certified_translator">certified translator&lt;//a>)&lt;br /&gt;
+        &lt;br /&gt;
+        If a certified translator completed your translation:&lt;br /&gt;
+        &lt;br /&gt;
+        • The document must be stamped with the translator’s certification or registration number&lt;br /&gt;
+        • You can indicate that you’re not providing an affidavit because a certified translator completed the translation (write a letter and scan it with your translated document)&lt;br /&gt;
+        &lt;br /&gt;
+        If you feel like a document you are submitting might raise the slightest question from an immigration officer, you should add a &lt;a href="https://docs.google.com/file/d/19NvaeMYNc2-jfc8atrkGtJWKUSk-CPo1/edit?usp=docslist_api&amp;filetype=msword">Letter of Explanation&lt;//a> (LoE) (sample in the link) to your documents. For example, if it concerns your passport section, then add your LoE to the PDF file that you will upload to the passport section.&lt;br /&gt;
     </string>
     <string name="fees_long_desc">
         There are 3 types of fees that you would need to pay for your e-APR:&lt;br /&gt;
@@ -542,5 +621,143 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="home">Home</string>
     <string name="more">More</string>
-</resources>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
 
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="guide">Guide</string>
+    <string name="get_start_msg">Welcome to the journey to your Canadian PR process. Use TrekNation as a guide to navigate through the different steps in your PR journey. Calculate your CRS score, get notified about the latest cutoff score and more!</string>
+    <string name="get_start">Get Started</string>
+    <string name="start_your_journey">Start your journey</string>
+    <string name="permanent_address">Your Step by Step Guide to Canadian Permanent Residence</string>
+    <string name="get_started">Get Started</string>
+    <string name="permanent_address_process">Have you started your Canadian Permanent Residence process?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="created_profile">Created Profile</string>
+    <string name="received_ita">Received ITA</string>
+    <string name="submitted_docs">Submitted Docs</string>
+    <string name="landing_procedures">Landing Procedures</string>
+    <string name="user_journey">Personalized User Journey For Your Own Unique Needs</string>
+    <string name="hint_your_name">Your Name</string>
+    <string name="hint_your_email">Your Email</string>
+    <string name="inside_canada">Are you going to apply from inside Canada?</string>
+    <string name="apply_individual_family">Are you going to apply as an individual or with a family?</string>
+    <string name="family">Family</string>
+    <string name="individual">Individual</string>
+    <string name="terms_condition"><u><![CDATA[I accept the terms & conditions.]]></u></string>
+    <string name="start_my_journey">Start My Journey</string>
+    <string name="hold_tight_soham_we_are_personalizing_your_journey">Hold tight, $s We are personalizing your journey.</string>
+    <string name="stage">Which Stage are you at?</string>
+
+    <string name="invalid_name">Please enter a valid name</string>
+    <string name="invalid_address">Please enter a valid email address</string>
+
+    <string name="email_regex">[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+</string>
+    <string name="email_regex_1">^(.+)@(.+)$</string>
+    <string name="single">Single</string>
+    <string name="married">Married</string>
+    <string name="age">Age</string>
+    <string name="education">Education</string>
+    <string name="language">Language</string>
+    <string name="experience">Experience</string>
+    <string name="additional_points">Additional Points</string>
+    <string name="spouse_education">Spouse Education</string>
+    <string name="spouse_language">Spouse Language</string>
+    <string name="spouse_experience">Spouse Experience</string>
+    <string name="select_your_age">Select your age</string>
+    <string name="outside_canada_edu">Overall Education</string>
+    <string name="secondary_high_school">Secondary High School</string>
+    <string name="_1_or_2_year_degree_or_diploma">One or two year diploma or certificate</string>
+    <string name="_3_years">3+ years</string>
+    <string name="inside_canada_edu">Canadian Education</string>
+    <string name="secondary">Secondary</string>
+    <string name="primary">Primary</string>
+    <string name="speaking">Speaking</string>
+    <string name="canadian_experience">Canadian Experience</string>
+    <string name="add_experience">Add Experience</string>
+    <string name="certificate_of_qualification">Do you have a certificate of qualification from a Canadian province or territory?</string>
+    <string name="job_offer">Choose your LMIA job offer below</string>
+    <string name="pr_citizen">Do you have a brother or sister living in Canada who is PR/Citizen?</string>
+    <string name="less_than_secondary_school_high_school">Less than secondary school (high school)</string>
+    <string name="secondary_diploma_high_school_graduation">Secondary diploma (high school graduation)</string>
+    <string name="one_year_degree_diploma_or_certificate_from_a_university_college_trade_or_technical_school_or_other_institute">One-year degree, diploma or certificate from a university, college, trade or technical school, or other institute</string>
+    <string name="two_year_program_at_a_university_college_trade_or_technical_school_or_other_institute">Two-year program at a university, college, trade or technical school, or other institute</string>
+    <string name="bachelor_s_degree_or_a_three_or_more_year_program_at_a_university_college_trade_or_technical_school_or_other_institute">Bachelor\'s degree OR a three or more year program at a university, college, trade or technical school, or other institute</string>
+    <string name="two_or_more_certificates_diplomas_or_degrees_one_must_be_for_a_program_of_three_or_more_years">Two or more certificates, diplomas, or degrees. One must be for a program of three or more years</string>
+    <string name="master_s_degree_or_professional_degree_needed_to_practice_in_a_licensed_profession_for_professional_degree_the_degree_program_must_have_been_in_medicine_veterinary_medicine_dentistry_optometry_law_chiropractic_medicine_or_pharmacy">Master\'s degree, OR professional degree needed to practice in a licensed profession (For “professional degree,” the degree program must have been in: medicine, veterinary medicine, dentistry, optometry, law, chiropractic medicine, or pharmacy.)</string>
+    <string name="doctoral_level_university_degree_ph_d">Doctoral level university degree (Ph.D.)</string>
+    <string name="degree_diploma_or_certificate_of_three_years_or_longer">Degree, diploma or certificate of 3 years or longer or a Master’s profession or Doctoral degree of at least 1 academic year</string>
+
+    <string name="foreign_experience">Foreign Experience</string>
+    <string-array name="primaryLang">
+        <item>IELTS</item>
+        <item>CELPIP</item>
+    </string-array>
+
+    <string-array name="secondaryLang">
+        <item>TEF Canada</item>
+        <item>TCF Canada</item>
+    </string-array>
+
+
+    <string-array name="secondary_primaryLang">
+        <item>IELTS</item>
+        <item>CELPIP</item>
+        <item>TEF Canada</item>
+        <item>TCF Canada</item>
+    </string-array>
+
+
+    <string-array name="canadian_exp">
+        <item>0 year</item>
+        <item>1 year</item>
+        <item>2 years</item>
+        <item>3 years</item>
+        <item>4 years</item>
+        <item>5 years+</item>
+    </string-array>
+
+    <string-array name="foreign_exp">
+        <item>0 year</item>
+        <item>1 or 2 years</item>
+        <item>3 years+</item>
+    </string-array>
+    
+    <string name="passport_scan_missing_desc">This error message is shown when the user has not uploaded all the pages with stamps, markings, entry/exit, or visas.</string>
+    <string name="work_exp_desc_and_duties_desc">This message is generally shown when the duties of the job experience do not match with the associated NOC code. You can have the title to be different than the one mentioned for the NOC but the duties and description for the NOC should be the same as the one mentioned within the Employment reference letter. You can get more information for the NOC at &lt;a href="https://noc.esdc.gc.ca/Home/Welcome/69498f81c95b4fe585d435d7e4ff2bca?GoCTemplateCulture=en-CA">this&lt;//a> link and find the template for the employment reference letter &lt;a href="https://drive.google.com/file/d/1fo1Udua9Zlnb3f9sHWfpt0lfqC_Mxdch/view">here&lt;//a>.</string>
+    <string name="not_uploading_eca_desc">There are times when IRCC might not ask for the ECA, your qualification degrees. If you have achieved Express Entry points for education, then you must upload ECA, your degrees, and/or academic transcripts.</string>
+    <string name="pcc_missing_desc">. If you left your home country for more than 6 months since the age of 18 then you will most likely have to upload at least one police clearance certificate. Check the police certificate section &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/medical-police/police-certificates/how.html">here&lt;//a> to understand what you need. You need to provide police certificates for all your family members, spouse, and children of 18 years or older.</string>
+    <string name="pcc_not_in_color_desc">This message is specifically shown if the PCC is black and white. Even if the original PCC is in black and white, you should color scan it.</string>
+    <string name="a_few_words_explicitly_written_desc">The employment reference letter needs to be exactly as per the format that CIC expects. You can find the template for the employment reference letter &lt;a href="https://drive.google.com/file/d/1fo1Udua9Zlnb3f9sHWfpt0lfqC_Mxdch/view?usp=sharing">here&lt;//a>.</string>
+    <string name="submitting_ban_statement_">Bank statements should be printed on the letterhead of the bank. You can get more information on proof of funds &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/proof-funds.html">here&lt;//a>.</string>
+    <string name="not_upload_english_french_translation_desc">If your documents are not in English or French, they will need to be translated by a certified translator to English or French. You may be requested by IRCC to submit an affidavit of the translator.</string>
+    <string name="not_the_foreign_lang_desc">When uploading the translated document, remember to always upload the original foreign language document as well.</string>
+    <string name="canadian_education_dec">The prerequisite for getting Canadian Education points is that the course should not be more than 50% online. It is at the discretion of the immigration officer to refuse the additional 15 or 30 points for a Canadian education credential if the course fails to meet the criteria as mentioned above or if the officer deems you were not in good standing on course completion.</string>
+    <string name="not_signing_application_forms_desc">This mistake happens often when the user misses out on any signature. E.g. Some forms such as Additional Family information may require as many as 3 signatures on a single page. Even if 1 signature is missed, the file may be returned to rectify. Another common mistake is to sign where it was not required. E.g. you may have signed for a section for which you need to sign only if you used a translator. If no translator was used, the file may be sent back. Hence it is very important to only sign wherever required.</string>
+    <string name="paying_the_fee_incorrectly_desc">Different immigration programs require different methods for making the payment. Payment options may rely on many factors such as where will you be paying from and what is amount you will be paying. You can make a payment online, via bank draft, certified cheque, or money order. Please visit &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/apply-permanent-residence/fees.html">this&lt;//a> link for more details. Always be sure to pay the correct amount as provided by CIC. Incorrect fee payment might delay your application.</string>
+    <string name="correct_size_photo_desc">Express Entry application requires photographs of a specific size. You can review the photograph sizes at this &lt;a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/new-immigrants/pr-card/apply-renew-replace/photo.html">link&lt;//a>. Failure to send the correct size photograph might result in an error and you might be required to submit the photo again.</string>
+    <string name="additional_forms_for_certain_countries_desc">Users from certain countries are required to provide additional forms, in addition to the standard forms required by everyone else. For example, a residency questionnaire is required by people residing in Abu Dhabi, UAE (United Arab Emirates. Education and Work Experience questionnaire is also required to be filled by people residing in Islamabad, Pakistan.</string>
+    <string name="providing_info_decs">Providing incorrect information is a serious offense according to Canadian Immigration law. The decision on an applicant’s file is made based on the data provided by the applicant. The negative consequence of providing incorrect information includes rejection of the application as well as exclusion from Canada for at least 2 years. If there is information, requested by CIC, which is missing, you must provide an accurate reason for the missing information and by when can you provide it.</string>
+    <string name="illegible_handwritten_desc">Application forms can either be completed by hand or digitally using a computer. Generally, Adobe Reader is used to filling forms online. It is up to the user to choose how they want to fill the form. It is usually advised to fill the form on the computer.  If users fill the form manually, there is a chance it may not be legible to the reviewing officer. As a result, the officer might return the file to the user asking for clarification for the illegible fields.</string>
+
+    <string name="spouse_exp_note"><b>Note:</b> If your Spouse is not coming with you to Canada, or they are Canadian citizen or PR, you will earn points as if you don’t have a spouse. Please use the single section for calculating score in this case.Note: If your Spouse is not coming with you to Canada, or they are Canadian citizen or PR, you will earn points as if you don’t have a spouse. Please use the single section for calculating score in this case.</string>
+    <string name="_0">0</string>
+    <string name="exp_note"><b>Note:</b> If your Spouse is not coming with you to Canada, or they are Canadian citizen or PR, you will earn points as if you don’t have a spouse. Please use the single section for calculating score in this case.</string>
+    <string name="do_you_have_a_letter_of_nomination_from_province">Do you have a letter of nomination from province?</string>
+    <string name="work_experience">Work Experience</string>
+    <string name="calculate_crs_score">Calculate CRS Score</string>
+    <string name="default_notification_channel_id">1</string>
+
+    <string name="facebook_app_id">2117061315097316</string>
+    <string name="fb_login_protocol_scheme">fb2117061315097316</string>
+
+    <string name="label_com">"</string>
+    <string name="link_to_crs_calculator"><b>CRS Calculator</b> \nYou can use Calculator here to calculate your score.</string>
+
+</resources>

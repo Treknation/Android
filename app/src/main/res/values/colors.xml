@@ -2,8 +2,35 @@
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
-    <color name="colorAccent">#03DAC5</color>
+    <color name="colorAccent">#143d59</color>
     <color name="white">#FFFFFF</color>
     <color name="dark_slate_blue">#143d59</color>
     <color name="charcoal_grey">#46494c</color>
+    <color name="orangey_yellow">#f4b41d</color>
+    <color name="mango">#faa732</color>f4b41d
+    <color name="cerulean">#077cc5</color>
+
+    <color name="regular_text">#46494c</color>
+    <color name="headings_text">#143d59</color>
+
+    <color name="onBoarding_background">#fefcfd</color>
+    <color name="lightBlue">#d5e9f6</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="shadowColor">#808e8e8e</color>
+
+    <array name="array_dot_active">
+        <item>@color/dark_slate_blue</item>
+        <item>@color/dark_slate_blue</item>
+        <item>@color/dark_slate_blue</item>
+        <item>@color/dark_slate_blue</item>
+        <item>@color/dark_slate_blue</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/onBoarding_background</item>
+        <item>@color/onBoarding_background</item>
+        <item>@color/onBoarding_background</item>
+        <item>@color/onBoarding_background</item>
+        <item>@color/onBoarding_background</item>
+    </array>
 </resources>

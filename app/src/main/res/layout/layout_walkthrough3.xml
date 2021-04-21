@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/onBoarding_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnNext"
+            style="@style/OvalTextView.LightBlue.TextBlue.14sp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:layout_below="@+id/tlYourEmail"
+            android:layout_marginStart="68dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="67dp"
+            android:text="@string/next"
+            android:textAllCaps="false" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTrackNationApp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/onboarding_tracknation_pic" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDevice"
+            android:layout_width="match_parent"
+            android:layout_height="204dp"
+            android:layout_below="@+id/ivTrackNationApp"
+            android:layout_marginTop="61dp"
+            android:src="@drawable/ic_email" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvUserJourney"
+            style="@style/Text.Slate.18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivDevice"
+            android:layout_marginStart="50dp"
+            android:fontFamily="@font/commissioner_thin_medium"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="50dp"
+            android:text="@string/user_journey" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlYourName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginEnd="62dp"
+            app:boxBackgroundColor="@color/dark_slate_blue"
+            android:layout_below="@+id/tvUserJourney">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editYourName"
+                style="@style/EditText.TextBlue.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:fontFamily="@font/sourcesansproregular"
+                android:inputType="text"
+                android:hint="@string/hint_your_name"
+                android:imeOptions="actionDone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tlYourEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="63dp"
+            android:layout_marginEnd="62dp"
+            app:boxBackgroundColor="@color/dark_slate_blue"
+            android:layout_below="@+id/tlYourName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editYourEmail"
+                style="@style/EditText.TextBlue.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/editYourName"
+                android:hint="@string/hint_your_email"
+                android:inputType="text"
+                android:fontFamily="@font/sourcesansproregular"
+                android:maxLines="1"
+                android:imeOptions="actionDone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+    </RelativeLayout>
+</ScrollView>

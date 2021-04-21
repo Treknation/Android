@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "437138952909",
+    "project_id": "treknation-82826",
+    "storage_bucket": "treknation-82826.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:437138952909:android:784c2a826bbfe16de60f84",
+        "android_client_info": {
+          "package_name": "com.prod.treknation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "437138952909-qdsp6u1hkpuvmum0pin7mlbq4c076hd2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjEJztgnlSuFsxxVrybTOw6ddH7yjJaTo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "437138952909-qdsp6u1hkpuvmum0pin7mlbq4c076hd2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "437138952909-i5238n5e044uvl6ami9q3hugold13843.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.prod.treknation"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

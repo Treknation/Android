@@ -6,6 +6,8 @@
         <item name="colorPrimaryDark">@color/dark_slate_blue</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowAnimationStyle">@style/CustomActivityAnimation</item>
+        <item name="android:spotShadowAlpha">0.25</item>
+        <item name="android:ambientShadowAlpha">0.25</item>
     </style>
 
     <style name="CustomActivityAnimation" parent="@android:style/Animation.Activity">
@@ -15,9 +17,65 @@
         <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
     </style>
 
-    <style name="SplashScreen" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="SplashScreen" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/background_splashscreen</item>
+        <item name="colorPrimaryDark">@color/dark_slate_blue</item>
+    </style>
 
+    <style name="Text.Slate.18sp" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/dark_slate_blue</item>
+        <item name="android:textSize">@dimen/textSize18sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Text.Slate.24sp" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/dark_slate_blue</item>
+        <item name="android:textSize">@dimen/textSize24sp</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="Checkbox.Slate.14sp" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textColor">@color/dark_slate_blue</item>
+        <item name="android:textSize">@dimen/textSize14sp</item>
+    </style>
+
+    <style name="OvalButton.LightBlue.TextBlue.14sp" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/dark_slate_blue</item>
+        <item name="android:textSize">@dimen/textSize14sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@drawable/oval_button</item>
+    </style>
+
+    <style name="OvalTextView.LightBlue.TextBlue.14sp" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/dark_slate_blue</item>
+        <item name="android:textSize">@dimen/textSize14sp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@drawable/oval_button</item>
+    </style>
+
+    <style name="OvalButton.Transparent.TextBlue.14sp" parent="Widget.AppCompat.Button">
+        <item name="android:textColor">@color/dark_slate_blue</item>
+        <item name="android:textSize">@dimen/textSize14sp</item>
+        <item name="android:background">@drawable/oval_transparent_button</item>
+    </style>
+
+    <style name="OvalTextView.Transparent.TextBlue.14sp" parent="Widget.AppCompat.TextView">
+        <item name="android:textColor">@color/dark_slate_blue</item>
+        <item name="android:textSize">@dimen/textSize14sp</item>
+        <item name="android:background">@drawable/oval_transparent_button</item>
+    </style>
+
+    <style name="EditText.TextBlue.14sp" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/dark_slate_blue</item>
+        <item name="android:textSize">@dimen/textSize14sp</item>
+    </style>
+    <style name="tooltip" parent="Widget.MaterialComponents.Tooltip">
+        <item name="shapeAppearanceOverlay">@style/tooltipShOverylay</item>
+        <item name="backgroundTint">@color/colorPrimary</item>
+    </style>
+
+    <style name="tooltipShOverylay">
+        <item name="cornerSize">50%</item>
     </style>
 
 </resources>

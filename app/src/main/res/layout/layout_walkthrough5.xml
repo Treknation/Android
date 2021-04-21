@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/onBoarding_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTrackNationApp"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/onboarding_tracknation_pic" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDevice"
+            android:layout_width="match_parent"
+            android:layout_height="203dp"
+            android:layout_below="@+id/ivTrackNationApp"
+            android:layout_marginTop="65dp"
+            android:src="@drawable/ic_people" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvApplyCanada"
+            style="@style/Text.Slate.18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:layout_marginStart="55dp"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/commissioner_thin_medium"
+            android:layout_marginEnd="56dp"
+            android:layout_below="@+id/ivDevice"
+            android:text="@string/apply_individual_family"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintIndi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="47dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginTop="42dp"
+            android:layout_below="@+id/tvApplyCanada">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnIndividual"
+                style="@style/OvalTextView.Transparent.TextBlue.14sp"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/commissioner_thin_medium"
+                android:background="@drawable/oval_transparent_button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnFamily"
+                android:text="@string/individual"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnFamily"
+                style="@style/OvalTextView.Transparent.TextBlue.14sp"
+                android:layout_width="0dp"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:fontFamily="@font/commissioner_thin_medium"
+                android:layout_height="48dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:background="@drawable/oval_transparent_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnIndividual"
+                android:layout_marginStart="16dp"
+                android:text="@string/family"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <RelativeLayout
+            android:id="@+id/llTerms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/constraintIndi">
+
+            <CheckBox
+                android:id="@+id/cbTermsCondition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingEnd="8dp"
+                android:button="@drawable/radio_button_background" />
+
+            <TextView
+                android:id="@+id/tvTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/dark_slate_blue"
+                android:layout_toEndOf="@+id/cbTermsCondition"
+                android:textSize="@dimen/textSize14sp"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/terms_condition"
+                style="@style/Checkbox.Slate.14sp" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnStartMyJourney"
+            style="@style/OvalTextView.LightBlue.TextBlue.14sp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="68dp"
+            android:layout_marginEnd="67dp"
+            android:layout_marginBottom="16dp"
+            android:textAllCaps="false"
+            android:gravity="center"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:visibility="invisible"
+            android:layout_marginTop="34dp"
+            android:layout_below="@+id/llTerms"
+            android:text="@string/start_my_journey"/>
+    </RelativeLayout>
+</ScrollView>

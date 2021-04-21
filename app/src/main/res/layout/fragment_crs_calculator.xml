@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout
+        android:id="@+id/rlHeader"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_margin="@dimen/pagetitl16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/sourcesansprosemibold"
+            android:gravity="center"
+            android:text="@string/calculate_crs_score"
+            android:textAlignment="center"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="18sp"
+            app:autoSizeMaxTextSize="100sp"
+            app:autoSizeMinTextSize="18sp"
+            app:autoSizeTextType="uniform" />
+
+        <ImageView
+            android:id="@+id/btnBackArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_icon_back" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llCRCScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="8dp"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlHeader">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="30dp"
+            android:layout_weight="1"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/commissioner_thin_medium"
+            android:text="Your CRS Score"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/textSize24sp"
+            app:autoSizeMaxTextSize="80sp"
+            app:autoSizeMinTextSize="12sp"
+            app:autoSizeTextType="uniform" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            app:cardBackgroundColor="@color/orangey_yellow"
+            app:cardCornerRadius="150dp"
+            app:cardElevation="8dp">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tvCrsScore"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@null"
+                android:elevation="8dp"
+                android:fontFamily="@font/commissioner_thin_medium"
+                android:text="567"
+                android:textColor="@color/dark_slate_blue"
+                android:textSize="@dimen/textSize24sp" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/tvCrsRefresh"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="13dp"
+            android:layout_weight="0.5"
+            android:fontFamily="@font/commissioner_thin_medium"
+            android:src="@drawable/ic_icon_reset"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/textSize24sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llMaritalStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llCRCScore">
+
+        <Button
+            android:id="@+id/btnSingle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rect_button_line"
+            android:text="@string/single"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/textSize18sp" />
+
+        <Button
+            android:id="@+id/btnMarried"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:text="@string/married"
+            android:textAllCaps="false"
+            android:textColor="@color/dark_slate_blue"
+            android:textSize="@dimen/textSize18sp" />
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llMaritalStatus">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="47dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/lightBlue"
+                    android:gravity="center_vertical"
+                    android:paddingStart="26dp"
+                    android:paddingTop="19dp"
+                    android:paddingBottom="19dp"
+                    android:text="@string/age"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/textSize18sp" />
+
+                <TextView
+                    android:id="@+id/tvAgeScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@color/dark_slate_blue"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:paddingBottom="19dp"
+                    android:text="@string/_0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llEdu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="47dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvEdu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/lightBlue"
+                    android:gravity="center_vertical"
+                    android:paddingStart="26dp"
+                    android:paddingTop="19dp"
+                    android:paddingBottom="19dp"
+                    android:text="@string/education"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/textSize18sp" />
+
+                <TextView
+                    android:id="@+id/tvEduScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@color/dark_slate_blue"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:paddingBottom="19dp"
+                    android:text="@string/_0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llLang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="47dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvLang"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/lightBlue"
+                    android:gravity="center_vertical"
+                    android:paddingStart="26dp"
+                    android:paddingTop="19dp"
+                    android:paddingBottom="19dp"
+                    android:text="@string/language"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/textSize18sp" />
+
+                <TextView
+                    android:id="@+id/tvLangScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@color/dark_slate_blue"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:paddingBottom="19dp"
+                    android:text="@string/_0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llExp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="47dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvExp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/lightBlue"
+                    android:gravity="center_vertical"
+                    android:paddingStart="26dp"
+                    android:paddingTop="19dp"
+                    android:paddingBottom="19dp"
+                    android:text="@string/work_experience"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/textSize18sp" />
+
+                <TextView
+                    android:id="@+id/tvExpScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@color/dark_slate_blue"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:paddingBottom="19dp"
+                    android:text="@string/_0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llAdditionalPoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="47dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tvAdditionalPonts"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:background="@color/lightBlue"
+                    android:gravity="center_vertical"
+                    android:paddingStart="26dp"
+                    android:paddingTop="19dp"
+                    android:paddingBottom="19dp"
+                    android:text="@string/additional_points"
+                    android:textColor="@color/dark_slate_blue"
+                    android:textSize="@dimen/textSize18sp" />
+
+                <TextView
+                    android:id="@+id/tvAdditionalPointScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:background="@color/dark_slate_blue"
+                    android:gravity="center"
+                    android:paddingTop="19dp"
+                    android:paddingBottom="19dp"
+                    android:text="@string/_0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/textSize18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMarried"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/llSpouseEdu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="47dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvSpouseEdu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@color/lightBlue"
+                        android:gravity="center_vertical"
+                        android:paddingStart="26dp"
+                        android:paddingTop="19dp"
+                        android:paddingBottom="19dp"
+                        android:text="@string/spouse_education"
+                        android:textColor="@color/dark_slate_blue"
+                        android:textSize="@dimen/textSize18sp" />
+
+                    <TextView
+                        android:id="@+id/tvSpouseEduScore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/dark_slate_blue"
+                        android:gravity="center"
+                        android:paddingTop="19dp"
+                        android:paddingBottom="19dp"
+                        android:text="@string/_0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSpouseLang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="47dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvSpouseLang"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@color/lightBlue"
+                        android:gravity="center_vertical"
+                        android:paddingStart="26dp"
+                        android:paddingTop="19dp"
+                        android:paddingBottom="19dp"
+                        android:text="@string/spouse_language"
+                        android:textColor="@color/dark_slate_blue"
+                        android:textSize="@dimen/textSize18sp" />
+
+                    <TextView
+                        android:id="@+id/tvSpouseLangScore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/dark_slate_blue"
+                        android:gravity="center"
+                        android:paddingTop="19dp"
+                        android:paddingBottom="19dp"
+                        android:text="@string/_0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/llSpouseExp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="47dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tvSpouseExp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.5"
+                        android:background="@color/lightBlue"
+                        android:gravity="center_vertical"
+                        android:paddingStart="26dp"
+                        android:paddingTop="19dp"
+                        android:paddingBottom="19dp"
+                        android:text="@string/spouse_experience"
+                        android:textColor="@color/dark_slate_blue"
+                        android:textSize="@dimen/textSize18sp" />
+
+                    <TextView
+                        android:id="@+id/tvSpouseExpScore"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1.5"
+                        android:background="@color/dark_slate_blue"
+                        android:gravity="center"
+                        android:paddingTop="19dp"
+                        android:paddingBottom="19dp"
+                        android:text="@string/_0"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize18sp" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="47dp"
+                    android:fontFamily="regu"
+                    android:text="@string/exp_note"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/textSize14sp"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

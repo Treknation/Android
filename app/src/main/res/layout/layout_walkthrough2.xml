@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/onBoarding_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"
+        android:layout_marginBottom="20dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivTrackNationApp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/onboarding_tracknation_pic" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDevice"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_below="@+id/ivTrackNationApp"
+            android:layout_marginTop="90dp"
+            android:src="@drawable/ic_steps_device" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPermanentAddress"
+            style="@style/Text.Slate.18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/commissioner_thin_medium"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="55dp"
+            android:layout_marginEnd="56dp"
+            android:layout_below="@+id/ivDevice"
+            android:text="@string/permanent_address_process"/>
+
+        <LinearLayout
+            android:id="@+id/llOptionButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp"
+            android:visibility="gone"
+            android:layout_below="@+id/tvPermanentAddress">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCreatedProfile"
+                style="@style/OvalButton.Transparent.TextBlue.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:fontFamily="@font/commissioner_thin_medium"
+                android:layout_marginStart="68dp"
+                android:layout_marginEnd="67dp"
+                android:text="@string/created_profile"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnReceivedITA"
+                style="@style/OvalButton.Transparent.TextBlue.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/commissioner_thin_medium"
+                android:layout_marginStart="68dp"
+                android:layout_marginEnd="67dp"
+                android:text="@string/received_ita"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnSubmittedDocs"
+                style="@style/OvalButton.Transparent.TextBlue.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textAllCaps="false"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/commissioner_thin_medium"
+                android:layout_marginStart="68dp"
+                android:layout_marginEnd="67dp"
+                android:text="@string/submitted_docs"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnLandingProcedures"
+                style="@style/OvalButton.Transparent.TextBlue.14sp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:fontFamily="@font/commissioner_thin_medium"
+                android:textAllCaps="false"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="68dp"
+                android:layout_marginEnd="67dp"
+                android:text="@string/landing_procedures"/>
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/clYesNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="59dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginTop="54dp"
+            android:layout_below="@+id/tvPermanentAddress">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnYes"
+                style="@style/OvalButton.Transparent.TextBlue.14sp"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:fontFamily="@font/commissioner_thin_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btnNo"
+                android:text="@string/yes"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNo"
+                style="@style/OvalButton.Transparent.TextBlue.14sp"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:fontFamily="@font/commissioner_thin_medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnYes"
+                android:layout_marginStart="16dp"
+                android:text="@string/no"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </RelativeLayout>
+</ScrollView>
